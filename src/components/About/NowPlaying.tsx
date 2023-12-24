@@ -2,6 +2,7 @@ import { TbBrandSpotify } from "react-icons/tb"
 import PlayingAnimation from "./PlayingAnimation"
 import axios from "axios"
 import { useState, useEffect } from "react"
+import getConfig from "next/config"
 
 type Props = {
   playing: boolean
@@ -51,17 +52,14 @@ const NowPlaying = ({ playing }: Props) => {
   const refreshToken = async () => {
     const tokenUrl = "https://accounts.spotify.com/api/token"
 
-    console.log(process.env.REFRESH_TOKEN?.substring(0, 10))
-    console.log(process.env.CLIENT_ID?.substring(0, 10))
-    console.log(process.env.CLIENT_SECRET?.substring(0, 10))
 
     try {
       const response = await axios.post(
         tokenUrl,
-        `grant_type=refresh_token&refresh_token=${process.env.REFRESH_TOKEN}`,
+        `grant_type=refresh_token&refresh_token=${getConfig().publicRuntimeConfig.REFRESH_TOKEN}`,
         {
           headers: {
-            Authorization: `Basic ${btoa(`${process.env.CLIENT_ID}:${process.env.CLIENT_SECRET}`)}`,
+            Authorization: `Basic ${btoa(`${getConfig().publicRuntimeConfig.CLIENT_ID}:${getConfig().publicRuntimeConfig.CLIENT_SECRET}`)}`,
             "Content-Type": "application/x-www-form-urlencoded",
           },
         }
