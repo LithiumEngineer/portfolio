@@ -77,7 +77,7 @@ const NowPlaying = ({ playing }: Props) => {
         "https://api.spotify.com/v1/me/player/currently-playing",
         {
           headers: {
-            Authorization: `Bearer ${token}`,
+            Authorization: `Bearer BQBj809ZeVR0cN8fzQu7BQK0x0BqkHt3e29UVTXu0v6HqnwKomJUC_6azP_JodhLUOqHrqoYExpCbwG_4uFH0iSeIm5PXTYXorAQbYEJglaIEl9kc-8PdWdZfy46BkYcdSoZigqPWugfXMb8-OZN0AruxtGZS0jbtCziKFlF4ou3QPSUsZFgk_MNEdCPsBHizz9lxw`,
           },
         }
       )
@@ -89,7 +89,7 @@ const NowPlaying = ({ playing }: Props) => {
       setDurationTime(data.item.duration_ms)
       setImageURL(data.item.album.images[0].url)
       setLink(data.item.external_urls.spotify)
-      console.log(data)
+      console.log(token)
     } catch (error) {
       console.error("Error fetching currently playing track:", error)
     }
