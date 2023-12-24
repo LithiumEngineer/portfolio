@@ -50,7 +50,10 @@ const NowPlaying = ({ playing }: Props) => {
 
   const refreshToken = async () => {
     const tokenUrl = "https://accounts.spotify.com/api/token"
-    const { encode } = require('base-64')
+
+    console.log(process.env.REFRESH_TOKEN?.substring(0, 10))
+    console.log(process.env.CLIENT_ID?.substring(0, 10))
+    console.log(process.env.CLIENT_SECRET?.substring(0, 10))
 
     try {
       const response = await axios.post(
@@ -58,7 +61,7 @@ const NowPlaying = ({ playing }: Props) => {
         `grant_type=refresh_token&refresh_token=${process.env.REFRESH_TOKEN}`,
         {
           headers: {
-            Authorization: `Basic ${encode(`${process.env.CLIENT_ID}:${process.env.CLIENT_SECRET}`)}`,
+            Authorization: `Basic ${btoa(`${process.env.CLIENT_ID}:${process.env.CLIENT_SECRET}`)}`,
             "Content-Type": "application/x-www-form-urlencoded",
           },
         }
@@ -66,7 +69,6 @@ const NowPlaying = ({ playing }: Props) => {
 
       const newAccessToken = response.data.access_token
       setToken(newAccessToken)
-      console.log(newAccessToken)
     } catch (error) {
       console.error("Error refreshing access token")
       throw error
