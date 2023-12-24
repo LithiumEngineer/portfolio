@@ -1,6 +1,7 @@
 import Courses from "./Courses"
 import { useState } from "react"
 import { GrLinkNext, GrLinkPrevious } from "react-icons/gr"
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa6"
 import { Inter, Orbitron } from "@next/font/google"
 
 const inter700 = Inter({
@@ -20,45 +21,83 @@ const Cards = ({ cardIndex, onForward, onPrevious }) => {
     <div>
       <Courses
         courses={[
-          "MATH 135 - Algebra",
-          "MATH 137 - Calculus 1",
-          "CS 145 - Designing functional programs (Advanced Level)",
-          "ECON 101 - Introduction to microeconmics",
-          "COMMST 223 - Public speaking",
+          <>
+            <p className="inline">MATH 145 - Algebra (Advanced Level) : </p>{" "}
+            <p className="inline text-[#90ff42]">94%</p>
+          </>,
+          <>
+            <p className="inline">MATH 147 - Calculus 1 (Advanced Level) : </p>{" "}
+            <p className="inline text-[#90ff42]">94%</p>
+          </>,
+          <>
+            <p className="inline">
+              CS 145 - Designing functional programs (Advanced Level) :{" "}
+            </p>{" "}
+            <p className="inline text-[#90ff42]">92%</p>
+          </>,
+          <>
+            <p className="inline">
+              ECON 101 - Introduction to microeconmics :{" "}
+            </p>{" "}
+            <p className="inline text-[#90ff42]">94%</p>
+          </>,
+          <>
+            <p className="inline">COMMST 223 - Public speaking : </p>{" "}
+            <p className="inline text-[#90ff42]">89%</p>
+          </>,
         ]}
-        term="1A"
+        term="1A (Fall 2023)"
       />
-
+    </div>,
+    <div>
       <Courses
-        className="mt-5"
         courses={[
-          "MATH 136 - Linear Algebra 1",
-          "MATH 138 - Calculus 2",
-          "CS 146 - Elementary algorithm design and data abstraction (Advanced Level)",
-          "TBD",
-          "TBD",
+          <>
+            <p className="inline">MATH 146 - Linear algebra 1 (Advanced Level) : </p>{" "}
+            <p className="inline text-[#90ff42]">In Progress</p>
+          </>,
+          <>
+            <p className="inline">MATH 148 - Calculus 2 (Advanced Level) : </p>{" "}
+            <p className="inline text-[#90ff42]">In Progress</p>
+          </>,
+          <>
+            <p className="inline">
+              CS 145 - Algorithm design and data abstraction (Advanced Level) :{" "}
+            </p>{" "}
+            <p className="inline text-[#90ff42]">In Progress</p>
+          </>,
+          <>
+            <p className="inline">
+              ECON 102 - Introduction to macroeconmics :{" "}
+            </p>{" "}
+            <p className="inline text-[#90ff42]">In Progress</p>
+          </>,
+          <>
+            <p className="inline">ENGL 108D - Digital Lives : </p>{" "}
+            <p className="inline text-[#90ff42]">In Progress</p>
+          </>,
         ]}
-        term="1B"
+        term="2A (Winter 2024)"
       />
     </div>,
   ]
   return (
-    <div className="relative h-[710px] w-[430px]">
+    <div className="relative h-[710px] w-[430px] text-[#cdd3f7]">
       <div
         onAnimationStart={() => setInAnimation(true)}
         onAnimationEnd={() => setInAnimation(false)}
-        className={`absolute flex flex-col h-[680px] w-[400px] rounded-md border-[5px] ${
+        className={`absolute flex flex-col h-[680px] w-[400px] rounded-md border-[0px] ${
           cardIndex % 2 == 0
             ? totalClicks == 0
-              ? "bg-[#eaeaea] border-black z-20"
-              : "bg-[#eaeaea] border-black z-20 top-[30px] left-[30px] show-card"
+              ? "bg-[#122445] border-black z-20"
+              : "bg-[#122445] border-black z-20 top-[30px] left-[30px] show-card"
             : "bg-[#5E5E5E] border-[#5E5E5E] z-10 hide-card"
         } duration-1000`}
       >
         {cardIndex % 2 == 0 && (
           <>
             <div
-              className={`text-3xl text-center pt-10 pb-5 ${orbitron400.className}`}
+              className={`text-5xl text-center py-10 ${orbitron400.className}`}
             >
               Courses
             </div>
@@ -74,9 +113,9 @@ const Cards = ({ cardIndex, onForward, onPrevious }) => {
               >
                 {cardIndex >= 1 && (
                   <div
-                    className={`flex items-center text-sm ${inter700.className} hover:bg-[#d8d8d8] hover:cursor-pointer hover:scale-105 py-2 px-3 rounded-lg duration-300`}
+                    className={`flex items-center text-sm ${inter700.className} hover:bg-[#091428] hover:cursor-pointer hover:scale-105 py-2 px-3 rounded-lg duration-300`}
                   >
-                    <GrLinkPrevious className="mr-2 w-5 h-5" />
+                    <FaArrowLeft className="mr-2 w-5 h-5" color="white" />
                     PREVIOUS
                   </div>
                 )}
@@ -92,10 +131,10 @@ const Cards = ({ cardIndex, onForward, onPrevious }) => {
               >
                 {cardIndex < cards.length - 1 && (
                   <div
-                    className={`flex items-center text-sm ${inter700.className} hover:bg-[#d8d8d8] hover:cursor-pointer hover:scale-105 py-2 px-3 rounded-lg duration-300`}
+                    className={`flex items-center text-sm ${inter700.className} hover:bg-[#091428] hover:cursor-pointer hover:scale-105 py-2 px-3 rounded-lg duration-300`}
                   >
                     NEXT
-                    <GrLinkNext className="ml-2 w-5 h-5" />
+                    <FaArrowRight className="ml-2 w-5 h-5" color="white" />
                   </div>
                 )}
               </div>
@@ -106,12 +145,12 @@ const Cards = ({ cardIndex, onForward, onPrevious }) => {
       <div
         onAnimationStart={() => setInAnimation(true)}
         onAnimationEnd={() => setInAnimation(false)}
-        className={`absolute flex flex-col h-[680px] w-[400px] rounded-md z-10 border-[5px] ${
+        className={`absolute flex flex-col h-[680px] w-[400px] rounded-md z-10 border-[0px] ${
           cardIndex % 2 == 0
             ? totalClicks == 0
               ? "bg-[#5E5E5E] border-[#5E5E5E] z-10 top-[30px] left-[30px]"
               : "bg-[#5E5E5E] border-[#5E5E5E] z-10 hide-card"
-            : "bg-[#eaeaea] border-black z-20 top-[30px] left-[30px] show-card"
+            : "bg-[#122445] border-black z-20 top-[30px] left-[30px] show-card"
         } duration-1000`}
       >
         {cardIndex % 2 == 1 && (
@@ -133,9 +172,9 @@ const Cards = ({ cardIndex, onForward, onPrevious }) => {
               >
                 {cardIndex >= 1 && (
                   <div
-                    className={`flex items-center text-sm ${inter700.className} hover:bg-[#d8d8d8] hover:cursor-pointer hover:scale-105 py-2 px-3 rounded-lg duration-300`}
+                    className={`flex items-center text-sm ${inter700.className} hover:bg-[#091428] hover:cursor-pointer hover:scale-105 py-2 px-3 rounded-lg duration-300`}
                   >
-                    <GrLinkPrevious className="mr-2 w-5 h-5" />
+                    <FaArrowLeft className="mr-2 w-5 h-5" color="white" />
                     PREVIOUS
                   </div>
                 )}
@@ -151,10 +190,10 @@ const Cards = ({ cardIndex, onForward, onPrevious }) => {
               >
                 {cardIndex < cards.length - 1 && (
                   <div
-                    className={`flex items-center text-sm ${inter700.className} hover:bg-[#d8d8d8] hover:cursor-pointer hover:scale-105 py-2 px-3 rounded-lg duration-300`}
+                    className={`flex items-center text-sm ${inter700.className} hover:bg-[#091428] hover:cursor-pointer hover:scale-105 py-2 px-3 rounded-lg duration-300`}
                   >
                     NEXT
-                    <GrLinkNext className="ml-2 w-5 h-5" />
+                    <FaArrowRight className="ml-2 w-5 h-5" color="white" />
                   </div>
                 )}
               </div>

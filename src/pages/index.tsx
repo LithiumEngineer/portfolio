@@ -29,6 +29,9 @@ export default function Home() {
       <div ref={aboutRef}>
         <About />
       </div>
+      <div>
+        <Education />
+      </div>
       <div ref={experienceRef}>
         <Experience />
       </div>

@@ -32,8 +32,12 @@ const Introduction = () => {
             Waterloo CS '28 | Seeking Summer 2024 Internships
           </div>
           <div className="text-xl mt-2 text-[#cdd3f7] text-opacity-80 text-justify">
-            Hi, I&apos;m Kevin! I&apos;m a software developer who aspires to use
-            technology to build solutions to real-world problems.
+            Hi, I&apos;m Kevin! I&apos;m a software developer who loves to use technology to build cool projects!
+          </div>
+          <div className="flex items-center text-xl mt-2 text-[#cdd3f7] text-opacity-80 text-justify">
+            <p style={{marginRight: '10px'}}>Current Mood: </p>
+            <p className="inline text-5xl">😎</p> 
+            {/* <p className="inline text-sm" style={{marginLeft: '10px'}}> (using Weather API) </p> */}
           </div>
           <div className="w-fit mx-auto">
             <a href="mailto:haochenkang.business@gmail.com">

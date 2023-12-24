@@ -33,10 +33,10 @@ const EducationCard = () => {
       <div className="flex flex-col items-center w-auto h-fit px-[25px] py-[25px] bg-[#122445] rounded-md">
         <div className="flex flex-col w-full ">
           <p className={`text-[#cdd3f7] text-xl ${inter500.className}`}>
-            Bachelor&apos;s of Computer Science (BCS)
+            UNIVERSITY OF WATERLOO
           </p>
           <p className={`text-[#8b94c1] text-sm ${inter600.className}`}>
-            UNIVERSITY OF WATERLOO
+            Bachelor&apos;s of Computer Science (BCS)
           </p>
           <p
             className={`px-3 py-1 mt-2 border-[1.2px] border-[#8b94c1] text-[#8b94c1] w-fit rounded-lg ${inter400.className}`}
@@ -69,7 +69,7 @@ const EducationCard = () => {
           </p>
           <div className={`text-sm text-[#8b94c1] ${montserrat400.className}`}>
             <ul className="list-inside">
-            <BulletPoint className="mt-2">
+              <BulletPoint className="mt-2">
                 <p
                   className={`inline ${montserrat500.className} text-[#90ff42]`}
                 >
