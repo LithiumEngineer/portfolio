@@ -1,5 +1,6 @@
 import { Montserrat, Orbitron } from "@next/font/google"
 import BulletPoint from "../BulletPoint"
+import { ReactElement, JSXElementConstructor, ReactNode, PromiseLikeOfReactNode, Key } from "react"
 
 const montserrat400 = Montserrat({
   subsets: ["latin"],
@@ -11,7 +12,13 @@ const montserrat700 = Montserrat({
   weight: ["700"],
 })
 
-const Courses = ({ className = "", courses, term }) => {
+interface CoursesProps {
+  className?: string;
+  courses: ReactNode[]; // Assuming courses is an array of React nodes
+  term: string;
+}
+
+const Courses: React.FC<CoursesProps> = ({ className = "", courses, term }) => {
   return (
     <div className={className}>
       <div className={`px-8 text-lg ${montserrat400.className}`}>
@@ -19,9 +26,9 @@ const Courses = ({ className = "", courses, term }) => {
           {term}
         </p>
         <ul className="list-disc list-inside">
-          {courses.map((value, idx) => {
+          {courses.map((value: boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | PromiseLikeOfReactNode | Key | null | undefined, idx: number) => {
             return (
-              <BulletPoint key={value} className={`${idx != 0 && "mt-2"}`}>
+              <BulletPoint key={idx} className={`${idx != 0 && "mt-2"}`}>
                 {value}
               </BulletPoint>
             )

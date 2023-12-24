@@ -14,7 +14,13 @@ const orbitron400 = Orbitron({
   weight: ["400"],
 })
 
-const Cards = ({ cardIndex, onForward, onPrevious }) => {
+interface CardsProps {
+  cardIndex: number;
+  onForward: () => void;
+  onPrevious: () => void;
+}
+
+const Cards: React.FC<CardsProps> = ({ cardIndex, onForward, onPrevious }) => {
   const [totalClicks, setTotalClicks] = useState(0)
   const [inAnimation, setInAnimation] = useState(false)
   const cards = [

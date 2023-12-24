@@ -1,5 +1,5 @@
 import { BiMenu } from "react-icons/bi"
-import { useCallback, useEffect, useState } from "react"
+import { RefObject, useCallback, useEffect, useState } from "react"
 
 const useMobile = () => {
   const [mobile, setMobile] = useState<boolean>(true)
@@ -27,15 +27,24 @@ const useMobile = () => {
   return mobile
 }
 
-const Navbar = ({ onClick, aboutRef, projectRef, experienceRef }) => {
-  const mobile = useMobile()
+interface NavbarProps {
+  onClick: (ref: RefObject<HTMLElement>) => void;
+  aboutRef: RefObject<HTMLElement>;
+  projectRef: RefObject<HTMLElement>;
+  experienceRef: RefObject<HTMLElement>;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ onClick, aboutRef, projectRef, experienceRef }) => {  const mobile = useMobile()
   const [openMobileMenu, setOpenMobileMenu] = useState(false)
 
-  const clickOutside = (event) => {
-    if (event.target.classList.contains("outer")) {
+  const clickOutside = (event: React.MouseEvent<HTMLDivElement>) => {
+    const target = event.target as HTMLDivElement;
+  
+    if (target.classList.contains("outer")) {
       setOpenMobileMenu(false)
     }
   }
+
 
   // When user stretches window wider, the mobile menu will automatically hide
   const handleResize = () => {

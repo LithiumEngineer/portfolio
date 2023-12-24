@@ -1,6 +1,12 @@
+import { ReactNode } from "react";
 import { BsCaretRight } from "react-icons/bs"
 
-const BulletPoint = ({ children, className = "" }) => {
+interface BulletPointProps {
+  children: ReactNode;
+  className?: string;
+}
+
+const BulletPoint: React.FC<BulletPointProps> = ({ children, className = "" }) => {
   return (
     <li className={`flex ${className}`}>
       <BsCaretRight className="w-5 mt-1 text-[#90ff42]" />

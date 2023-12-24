@@ -11,19 +11,23 @@ const inter500 = Inter({
 
 type Props = {
   open: boolean
-  onClose: () => {}
+  onClose: () => void
   text: string
 }
 
 const PopupModal = ({ open, onClose, text }: Props) => {
   const [copied, setCopied] = useState<boolean>(false)
 
-  const clickOutside = (event) => {
-    if (event.target.classList.contains("outer")) {
-      onClose()
-      setCopied(false)
+  const clickOutside = (event: React.MouseEvent<HTMLDivElement>) => {
+    const target = event.target as HTMLDivElement;
+  
+    if (target.classList.contains("outer")) {
+      onClose();
+      setCopied(false);
     }
   }
+  
+  
 
   return (
     <div
