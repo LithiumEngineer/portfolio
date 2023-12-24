@@ -14,7 +14,7 @@ const NowPlaying = ({ playing }: Props) => {
   const [artist, setArtist] = useState("")
   const [currentTime, setCurrentTime] = useState(0)
   const [durationTime, setDurationTime] = useState(100)
-  const [imageURL, setImageURL] = useState(0)
+  const [imageURL, setImageURL] = useState("")
   const [link, setLink] = useState("")
 
   useEffect(() => {
@@ -36,7 +36,7 @@ const NowPlaying = ({ playing }: Props) => {
     return () => clearInterval(intervalId)
   }, [token])
 
-  function convert_to_time(s) {
+  function convert_to_time(s: number) {
     let minute = String(Math.floor(Math.floor(s / 1000) / 60))
     let second = String(Math.floor(s / 1000) % 60)
     while (minute.length != 1) {
