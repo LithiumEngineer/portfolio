@@ -24,6 +24,11 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+env: 
+ CLIENT_ID: ${{ secrets.CLIENT_ID }}
+ CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
+ REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
+
 jobs:
   # Build job
   build:
