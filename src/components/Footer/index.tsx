@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="w-full">Kevin Kang 2023</div>
       </div>
       <div className="text-center mx-5">
-        <TypewriterEffect words={FOOTER_WORDS} colors={FOOTER_WORDS_COLOR} />
+        <TypewriterEffect words={FOOTER_WORDS} colors={FOOTER_WORDS_COLOR} cursor={false} />
       </div>
       <div className="whitespace-nowrap text-[#cdd3f7]">
         All Rights Reserved.

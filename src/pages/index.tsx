@@ -5,16 +5,18 @@ import Footer from "@/components/Footer"
 import Introduction from "@/components/Introduction"
 import Navbar from "@/components/Navbar"
 import Projects from "@/components/Projects"
-import { useRef } from "react"
+import { RefObject, useRef } from "react"
 
 export default function Home() {
   const projectRef = useRef(null)
   const experienceRef = useRef(null)
   const aboutRef = useRef(null)
 
-  const scroll = (ref) => {
-    const pos = ref.current.getBoundingClientRect().top + window.scrollY - 70
-    window.scrollTo({ top: pos, behavior: "smooth" })
+  const scroll = (ref: RefObject<HTMLElement>) => {
+    if (ref.current) {
+      const pos = ref.current.getBoundingClientRect().top + window.scrollY - 70
+      window.scrollTo({ top: pos, behavior: "smooth" })
+    }
   }
 
   return (
