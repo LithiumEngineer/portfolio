@@ -52,10 +52,6 @@ const NowPlaying = ({ playing }: Props) => {
   const refreshToken = async () => {
     const tokenUrl = "https://accounts.spotify.com/api/token"
 
-    console.log(process.env.REFRESH_TOKEN)
-    // console.log(getConfig().publicRuntimeConfig.CLIENT_ID.substring(1, 10))
-    // console.log(getConfig().publicRuntimeConfig.CLIENT_SECRET.substring(1, 10))
-
     try {
       const response = await axios.post(
         tokenUrl,
