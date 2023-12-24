@@ -18,6 +18,7 @@ const Cards = ({ cardIndex, onForward, onPrevious }) => {
   const [totalClicks, setTotalClicks] = useState(0)
   const [inAnimation, setInAnimation] = useState(false)
   const cards = [
+    // eslint-disable-next-line react/jsx-key
     <div>
       <Courses
         courses={[
@@ -37,7 +38,7 @@ const Cards = ({ cardIndex, onForward, onPrevious }) => {
           </>,
           <>
             <p className="inline">
-              ECON 101 - Introduction to microeconmics :{" "}
+              ECON 101 - Introduction to microeconomics :{" "}
             </p>{" "}
             <p className="inline text-[#90ff42]">94%</p>
           </>,
@@ -49,11 +50,14 @@ const Cards = ({ cardIndex, onForward, onPrevious }) => {
         term="1A (Fall 2023)"
       />
     </div>,
+    // eslint-disable-next-line react/jsx-key
     <div>
       <Courses
         courses={[
           <>
-            <p className="inline">MATH 146 - Linear algebra 1 (Advanced Level) : </p>{" "}
+            <p className="inline">
+              MATH 146 - Linear algebra 1 (Advanced Level) :{" "}
+            </p>{" "}
             <p className="inline text-[#90ff42]">In Progress</p>
           </>,
           <>

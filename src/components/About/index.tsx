@@ -36,7 +36,7 @@ const About = () => {
         </div>
         <div className="flex flex-col justify-between h-fit ml-10 max-w-[550px] text-sm">
           <div>
-            Hi! My name is Kevin and I'm currently a{" "}
+            Hi! My name is Kevin and I&apos;m currently a{" "}
             <p className="inline text-[#90ff42]">
               first year Computer Science Co-op student
             </p>{" "}
@@ -56,7 +56,7 @@ const About = () => {
             <p className="mt-4">
               Outside of coding, I love playing badminton or binge watching
               Youtube Shorts. I also love listening to pop music! Check out what
-              I'm currently listening to:
+              I&apos;m currently listening to:
             </p>
             <div className="mt-2">
               <NowPlaying playing />

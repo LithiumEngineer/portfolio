@@ -29,7 +29,7 @@ const Introduction = () => {
             />
           </div>
           <div className="text-lg mt-2 text-[#cdd3f7]">
-            Waterloo CS '28 | Seeking Summer 2024 Internships
+            Waterloo CS &apos;28 | Seeking Summer 2024 Internships
           </div>
           <div className="text-xl mt-2 text-[#cdd3f7] text-opacity-80 text-justify">
             Hi, I&apos;m Kevin! I&apos;m a software developer who loves to use technology to build cool projects!

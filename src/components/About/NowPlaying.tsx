@@ -135,7 +135,7 @@ const NowPlaying = ({ playing }: Props) => {
       ) : (
         <div className="w-full">
           <div className="text-center w-full text-md text-[#989cb5]">
-            I'm not currently listening to anything :(
+            I&apos;m not currently listening to anything :(
           </div>
           <div className="text-center w-full text-[12px] text-[#989cb5]">
             In the meantime, check out my list of amazing songs{" "}
