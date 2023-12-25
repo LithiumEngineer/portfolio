@@ -56,7 +56,7 @@ const NowPlaying = ({ playing }: Props) => {
       const response = await axios.post(
         tokenUrl,
         `grant_type=refresh_token&refresh_token=${getConfig().publicRuntimeConfig.REFRESH_TOKEN}`,
-        {
+        { 
           headers: {
             Authorization: `Basic ${btoa(`${getConfig().publicRuntimeConfig.CLIENT_ID}:${getConfig().publicRuntimeConfig.CLIENT_SECRET}`)}`,
             "Content-Type": "application/x-www-form-urlencoded",
