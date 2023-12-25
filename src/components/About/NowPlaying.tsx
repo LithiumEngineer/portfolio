@@ -3,7 +3,7 @@ import PlayingAnimation from "./PlayingAnimation"
 import axios from "axios"
 import { useState, useEffect } from "react"
 import getConfig from "next/config"
-
+ 
 type Props = {
   playing: boolean
 }
