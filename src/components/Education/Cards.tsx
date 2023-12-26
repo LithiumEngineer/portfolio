@@ -15,9 +15,9 @@ const orbitron400 = Orbitron({
 })
 
 interface CardsProps {
-  cardIndex: number;
-  onForward: () => void;
-  onPrevious: () => void;
+  cardIndex: number
+  onForward: () => void
+  onPrevious: () => void
 }
 
 const Cards: React.FC<CardsProps> = ({ cardIndex, onForward, onPrevious }) => {
@@ -92,27 +92,27 @@ const Cards: React.FC<CardsProps> = ({ cardIndex, onForward, onPrevious }) => {
     </div>,
   ]
   return (
-    <div className="relative h-[710px] w-[430px] text-[#cdd3f7]">
+    <div className="relative h-full w-[35vw] mx-auto text-[#cdd3f7]">
       <div
         onAnimationStart={() => setInAnimation(true)}
         onAnimationEnd={() => setInAnimation(false)}
-        className={`absolute flex flex-col h-[680px] w-[400px] rounded-md border-[0px] ${
+        className={`absolute flex flex-col justify-between h-full w-[33vw] rounded-md border-[0px] ${
           cardIndex % 2 == 0
             ? totalClicks == 0
-              ? "bg-[#122445] border-black z-20"
-              : "bg-[#122445] border-black z-20 top-[30px] left-[30px] show-card"
+              ? "bg-[#162c54] border-black z-20"
+              : "bg-[#162c54] border-black z-20 top-[30px] left-[30px] show-card"
             : "bg-[#5E5E5E] border-[#5E5E5E] z-10 hide-card"
         } duration-1000`}
       >
         {cardIndex % 2 == 0 && (
           <>
             <div
-              className={`text-5xl text-center py-10 ${orbitron400.className}`}
+              className={`text-3xl text-center pt-2 ${orbitron400.className}`}
             >
               Courses
             </div>
             {cards[cardIndex % cards.length]}
-            <div className="absolute bottom-5 flex justify-between px-5 w-full h-fit">
+            <div className="flex justify-between py-3 items-center">
               <div
                 onClick={() => {
                   if (!inAnimation) {
@@ -121,14 +121,16 @@ const Cards: React.FC<CardsProps> = ({ cardIndex, onForward, onPrevious }) => {
                   }
                 }}
               >
-                {cardIndex >= 1 && (
-                  <div
-                    className={`flex items-center text-sm ${inter700.className} hover:bg-[#091428] hover:cursor-pointer hover:scale-105 py-2 px-3 rounded-lg duration-300`}
-                  >
-                    <FaArrowLeft className="mr-2 w-5 h-5" color="white" />
-                    PREVIOUS
-                  </div>
-                )}
+                <div
+                  className={`flex items-center text-sm ${inter700.className} hover:bg-[#091428] hover:cursor-pointer hover:scale-105 px-3 mx-5 rounded-lg duration-300`}
+                >
+                  {cardIndex >= 1 && (
+                    <>
+                      <FaArrowLeft className="mr-2 w-5 h-5" color="white" />
+                      <p className="py-2">PREVIOUS</p>
+                    </>
+                  )}
+                </div>
               </div>
 
               <div
@@ -139,14 +141,16 @@ const Cards: React.FC<CardsProps> = ({ cardIndex, onForward, onPrevious }) => {
                   }
                 }}
               >
-                {cardIndex < cards.length - 1 && (
-                  <div
-                    className={`flex items-center text-sm ${inter700.className} hover:bg-[#091428] hover:cursor-pointer hover:scale-105 py-2 px-3 rounded-lg duration-300`}
-                  >
-                    NEXT
-                    <FaArrowRight className="ml-2 w-5 h-5" color="white" />
-                  </div>
-                )}
+                <div
+                  className={`flex items-center text-sm ${inter700.className} hover:bg-[#091428] hover:cursor-pointer hover:scale-105 px-3 mx-5 rounded-lg duration-300`}
+                >
+                  {cardIndex < cards.length - 1 && (
+                    <>
+                      <p className="py-2">NEXT</p>
+                      <FaArrowRight className="ml-2 w-5 h-5" color="white" />
+                    </>
+                  )}
+                </div>
               </div>
             </div>
           </>
@@ -155,23 +159,23 @@ const Cards: React.FC<CardsProps> = ({ cardIndex, onForward, onPrevious }) => {
       <div
         onAnimationStart={() => setInAnimation(true)}
         onAnimationEnd={() => setInAnimation(false)}
-        className={`absolute flex flex-col h-[680px] w-[400px] rounded-md z-10 border-[0px] ${
+        className={`absolute flex flex-col justify-between h-full w-[33vw] rounded-md z-10 border-[0px] ${
           cardIndex % 2 == 0
             ? totalClicks == 0
               ? "bg-[#5E5E5E] border-[#5E5E5E] z-10 top-[30px] left-[30px]"
               : "bg-[#5E5E5E] border-[#5E5E5E] z-10 hide-card"
-            : "bg-[#122445] border-black z-20 top-[30px] left-[30px] show-card"
+            : "bg-[#162c54] border-black z-20 top-[30px] left-[30px] show-card"
         } duration-1000`}
       >
         {cardIndex % 2 == 1 && (
           <>
             <div
-              className={`text-5xl text-center py-10 ${orbitron400.className}`}
+              className={`text-3xl text-center pt-2 ${orbitron400.className}`}
             >
               Courses
             </div>
             {cards[cardIndex % cards.length]}
-            <div className="absolute bottom-5 flex justify-between px-5 w-full h-fit">
+            <div className="flex justify-between py-3 items-center">
               <div
                 onClick={() => {
                   if (!inAnimation) {
@@ -180,14 +184,16 @@ const Cards: React.FC<CardsProps> = ({ cardIndex, onForward, onPrevious }) => {
                   }
                 }}
               >
-                {cardIndex >= 1 && (
-                  <div
-                    className={`flex items-center text-sm ${inter700.className} hover:bg-[#091428] hover:cursor-pointer hover:scale-105 py-2 px-3 rounded-lg duration-300`}
-                  >
-                    <FaArrowLeft className="mr-2 w-5 h-5" color="white" />
-                    PREVIOUS
-                  </div>
-                )}
+                <div
+                  className={`flex items-center text-sm ${inter700.className} hover:bg-[#091428] hover:cursor-pointer hover:scale-105 px-3 mx-5 rounded-lg duration-300`}
+                >
+                  {cardIndex >= 1 && (
+                    <>
+                      <FaArrowLeft className="mr-2 w-5 h-5" color="white" />
+                      <p className="py-2">PREVIOUS</p>
+                    </>
+                  )}
+                </div>
               </div>
 
               <div
@@ -198,14 +204,16 @@ const Cards: React.FC<CardsProps> = ({ cardIndex, onForward, onPrevious }) => {
                   }
                 }}
               >
-                {cardIndex < cards.length - 1 && (
-                  <div
-                    className={`flex items-center text-sm ${inter700.className} hover:bg-[#091428] hover:cursor-pointer hover:scale-105 py-2 px-3 rounded-lg duration-300`}
-                  >
-                    NEXT
-                    <FaArrowRight className="ml-2 w-5 h-5" color="white" />
-                  </div>
-                )}
+                <div
+                  className={`flex items-center text-sm ${inter700.className} hover:bg-[#091428] hover:cursor-pointer hover:scale-105 px-3 mx-5 rounded-lg duration-300`}
+                >
+                  {cardIndex < cards.length - 1 && (
+                    <>
+                      <p className="py-2">NEXT</p>
+                      <FaArrowRight className="ml-2 w-5 h-5" color="white" />
+                    </>
+                  )}
+                </div>
               </div>
             </div>
           </>

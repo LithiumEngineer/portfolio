@@ -14,21 +14,21 @@ const montserrat700 = Montserrat({
 
 interface CoursesProps {
   className?: string;
-  courses: ReactNode[]; // Assuming courses is an array of React nodes
+  courses: ReactNode[]; 
   term: string;
 }
 
 const Courses: React.FC<CoursesProps> = ({ className = "", courses, term }) => {
   return (
     <div className={className}>
-      <div className={`px-8 text-lg ${montserrat400.className}`}>
-        <p className={`text-2xl tracking-widest ${montserrat700.className} mb-2`}>
+      <div className={`px-8 text-[1.5vw] ${montserrat400.className}`}>
+        <p className={`text-base tracking-widest ${montserrat700.className} mb-2`}>
           {term}
         </p>
         <ul className="list-disc list-inside">
           {courses.map((value: boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | PromiseLikeOfReactNode | Key | null | undefined, idx: number) => {
             return (
-              <BulletPoint key={idx} className={`${idx != 0 && "mt-2"}`}>
+              <BulletPoint key={idx} className={`text-sm ${idx != 0 && "mt-2"}`}>
                 {value}
               </BulletPoint>
             )
