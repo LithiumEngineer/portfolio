@@ -35,12 +35,10 @@ const Experience = () => {
                 </div>
                 <ul className="text-[#8b94c1] text-sm mt-6">
                   <BulletPoint className="mt-1">
-                    built new website from scratch basically
+                    language icons (tailwind css, react etc.)
                   </BulletPoint>
                   <BulletPoint className="mt-1">
-                    Developed fuzzy searching, filtering, and sorting
-                    functionality, allowing users to conveniently find what they
-                    are looking for.
+                    short description
                   </BulletPoint>
                 </ul>
               </div>
@@ -60,12 +58,10 @@ const Experience = () => {
                 </div>
                 <ul className="text-[#8b94c1] text-sm mt-6">
                   <BulletPoint className="mt-1">
-                    Used Next.js and Tailwind CSS to build a site used by
-                    charities to track volunteer hours.
+                    language icons (tailwind css, react etc.)
                   </BulletPoint>
                   <BulletPoint className="mt-1">
-                    Developed form used by volunteers to submit volunteer hours,
-                    with features such as error-trapping and text auto-complete.
+                    short description
                   </BulletPoint>
                 </ul>
               </div>
