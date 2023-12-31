@@ -31,7 +31,7 @@ const EducationCard = () => {
   return (
     <div className="flex-1 h-fit w-full bg-[#162c54] rounded-md">
       <div className="flex flex-col justify-between w-full text-[#cdd3f7]">
-        <div className="flex flex-col items-center px-[25px] py-[25px] bg-[#162c54] rounded-md">
+        <div className="flex flex-col items-center px-[25px] py-[25px] bg-[#0f263f] rounded-md">
           <div className="flex flex-col w-full ">
             <p className={`text-[#cdd3f7] text-xl ${inter500.className}`}>
               Bachelor&apos;s of Computer Science (BCS)
