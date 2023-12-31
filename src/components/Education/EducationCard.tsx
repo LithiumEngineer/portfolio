@@ -33,16 +33,16 @@ const EducationCard = () => {
       <div className="flex flex-col justify-between w-full text-[#cdd3f7]">
         <div className="flex flex-col items-center px-[25px] py-[25px] bg-[#0f263f] rounded-md">
           <div className="flex flex-col w-full ">
-            <p className={`text-[#cdd3f7] text-xl ${inter500.className}`}>
+            <p
+              className={`text-[#90ff42] text-2xl tracking-wider ${inter600.className}`}
+            >
+              University of Waterloo
+            </p>
+            <p className={`text-[#ededfd] text-base ${inter400.className}`}>
               Bachelor&apos;s of Computer Science (BCS)
             </p>
-            <p className={`text-[#8b94c1] text-sm ${inter600.className}`}>
-              UNIVERSITY OF WATERLOO
-            </p>
-            <p
-              className={`px-3 py-1 mt-2 border-[1.2px] border-[#8b94c1] text-[#8b94c1] w-fit rounded-lg ${inter400.className}`}
-            >
-              2023 - Present
+            <p className="text-[#8b94c1]">
+              Waterloo, ON, Canada · Sept 2023 - Apr 2028 (Expected)
             </p>
           </div>
           <div className="w-full h-[1px] my-5 bg-[#3b426b] rounded-full"></div>
@@ -55,10 +55,14 @@ const EducationCard = () => {
             >
               <ul className="list-disc list-inside">
                 <BulletPoint className="mt-2">
-                  <p className={`inline`}>Computer Science Club (tentative)</p>
+                  <p className={`inline text-[#90ff42]`}>
+                    Computer Science Club{" "}
+                  </p>
+                  <p className="inline">member</p>
                 </BulletPoint>
                 <BulletPoint className="mt-2">
-                  <p className={`inline`}>Data Science Club (tentative)</p>
+                  <p className={`inline text-[#90ff42]`}>Data Science Club </p>
+                  <p className="inline">member</p>
                 </BulletPoint>
               </ul>
             </div>
