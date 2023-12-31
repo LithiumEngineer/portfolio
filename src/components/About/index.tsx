@@ -4,6 +4,7 @@ import { LANGUAGES, LANGUAGES_YEARS } from "@/constants"
 import BulletPoint from "../BulletPoint"
 import NowPlaying from "./NowPlaying"
 import Media from "../Introduction/Media"
+import Language from "./Language"
 
 const montserrat600 = Montserrat({
   subsets: ["latin"],
@@ -12,19 +13,19 @@ const montserrat600 = Montserrat({
 
 const About = () => {
   return (
-    <div className="w-screen h-fit">
-      <div className="flex items-center mx-auto w-[500px] py-10">
-        <div className="flex-grow h-[1px] bg-[#3b426b] rounded-full "></div>
+    <div className="w-screen h-fit overflow-hidden">
+      <div className="flex items-center mx-auto w-fit py-10">
+        <div className="flex-grow h-[1px] w-[80px] bg-[#3b426b] rounded-full "></div>
         <div
           className={`text-3xl mx-10 text-[#cdd3f7] ${montserrat600.className}`}
         >
           About me
         </div>
-        <div className="flex-grow h-[1px] bg-[#3b426b] rounded-full "></div>
+        <div className="flex-grow h-[1px] w-[80px] bg-[#3b426b] rounded-full "></div>
       </div>
 
-      <div className="flex w-full justify-center px-10 text-[#cdd3f7] text-md font-mono">
-        <div className="flex flex-col mr-10">
+      <div className="flex flex-grow flex-wrap w-full px-10 text-[#cdd3f7] text-md font-mono">
+        <div className="flex flex-col min-w-[300px] mx-auto">
           <img
             src="./myself.png"
             alt="image of myself"
@@ -34,7 +35,7 @@ const About = () => {
             <Media />
           </div>
         </div>
-        <div className="flex flex-col justify-between h-fit ml-10 max-w-[550px] text-sm">
+        <div className="flex-1 flex flex-col justify-between h-fit pl-10 pt-5 text-sm min-w-[350px]">
           <div>
             Hi! My name is Kevin and I&apos;m currently a{" "}
             <p className="inline text-[#90ff42]">
@@ -58,38 +59,40 @@ const About = () => {
               Youtube Shorts. I also love listening to pop music! Check out what
               I&apos;m currently listening to:
             </p>
-            <div className="mt-2">
+            <div className="mt-5 w-fit mx-auto">
               <NowPlaying playing />
             </div>
           </div>
+        </div>
+      </div>
+      <div className="text-[#cdd3f7] mt-20 mx-10">
+        <div className={`text-2xl w-fit mx-auto ${montserrat600.className}`}>
+          Languages
+        </div>
+        <div className="mt-2 w-fit flex flex-wrap mx-auto">
+          <Language imageURL="/cpp.png" text="C++" />
+          <Language imageURL="/java.png" text="Java" />
+          <Language imageURL="/python.png" text="Python" />
+          <Language imageURL="/html.png" text="HTML5" />
+          <Language imageURL="/css.png" text="CSS3" />
+          <Language imageURL="/js.png" text="JS" />
+          <Language imageURL="/react.png" text="React" />
+          <Language imageURL="/next.png" text="Next" />
+          <Language imageURL="/tailwind.png" text="Tailwind" />
+        </div>
+      </div>
 
-          <div className="mt-10">
-            <div>Some programming languages I have worked with include:</div>
-            <div className="flex flex-row justify-between w-auto h-fit">
-              {LANGUAGES.map((i, col) => {
-                return (
-                  <ul key={col}>
-                    {i.map((j, row) => {
-                      return (
-                        <div key={row} className="relative ">
-                          <BulletPoint className="mt-2" key={row}>
-                            <div className="w-[130px] overflow-hidden">
-                              <div className="flex w-fit hover:-translate-x-[130px] hover:cursor-pointer duration-500">
-                                <div className="w-[130px]">{j}</div>
-                                <div className="w-[130px]">
-                                  {LANGUAGES_YEARS[col * 3 + row]}
-                                </div>
-                              </div>
-                            </div>
-                          </BulletPoint>
-                        </div>
-                      )
-                    })}
-                  </ul>
-                )
-              })}
-            </div>
-          </div>
+      <div className="text-[#cdd3f7] mt-10 mx-10">
+        <div className={`text-2xl w-fit mx-auto ${montserrat600.className}`}>
+          Tools
+        </div>
+        <div className="mt-2 w-fit flex flex-wrap mx-auto">
+          <Language imageURL="/blender.png" text="Blender" />
+          <Language imageURL="/jira.png" text="Jira" />
+          <Language imageURL="/git.png" text="Git" />
+          <Language imageURL="/polygon.png" text="Blockchain" />
+          <Language imageURL="/figma.png" text="Figma" />
+          <Language imageURL="/aws.png" text="AWS" />
         </div>
       </div>
     </div>
