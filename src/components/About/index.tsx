@@ -14,14 +14,14 @@ const montserrat600 = Montserrat({
 const About = () => {
   return (
     <div className="w-screen h-fit overflow-hidden">
-      <div className="flex items-center mx-auto w-fit pt-32 pb-10">
-        <div className="flex-grow h-[1px] w-[80px] bg-[#3b426b] rounded-full "></div>
+      <div className="flex items-center mx-auto w-[calc(100%-50px)] max-w-[700px] pt-32 pb-10">
+        <div className="flex-grow h-[1px] w-auto bg-[#3b426b] rounded-full "></div>
         <div
           className={`text-5xl mx-10 text-[#cdd3f7] ${montserrat600.className}`}
         >
           About me
         </div>
-        <div className="flex-grow h-[1px] w-[80px] bg-[#3b426b] rounded-full "></div>
+        <div className="flex-grow h-[1px] w-auto bg-[#3b426b] rounded-full "></div>
       </div>
 
       <div className="flex flex-grow flex-wrap w-full px-10 text-[#cdd3f7] text-md font-mono">

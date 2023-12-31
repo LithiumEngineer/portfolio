@@ -102,7 +102,7 @@ const Navbar: React.FC<NavbarProps> = ({ onClick, aboutRef, projectRef, experien
       {/* Outer div is for detecting when user clicks outside navbar */}
       <div onClick={clickOutside} className={`outer absolute w-screen ${openMobileMenu ? "h-[calc(100vh-70px)]" : "h-0"} duration-300`}> 
         <div
-          className={`absolute right-0 w-screen bg-gradient-to-r from-indigo-700 to-purple-900 z-30
+          className={`absolute right-0 w-screen bg-[#0b1b2d] opacity-95 z-30
           ${openMobileMenu ? "h-[220px]" : "h-0"} expand-effect
         `}
         >
@@ -126,7 +126,7 @@ const Navbar: React.FC<NavbarProps> = ({ onClick, aboutRef, projectRef, experien
               onClick(experienceRef)
               setOpenMobileMenu(!openMobileMenu)
             }}
-            className={`text-white px-10 py-5 text-xl text-center hover:bg-gradient-to-r hover:from-indigo-800 hover:to-purple-950 hover:cursor-pointer ${
+            className={`text-white px-10 py-5 text-xl text-center hover:bg-[#112540] hover:cursor-pointer ${
               openMobileMenu ? "" : "hidden"
             }`}
           >
@@ -137,7 +137,7 @@ const Navbar: React.FC<NavbarProps> = ({ onClick, aboutRef, projectRef, experien
               onClick(projectRef)
               setOpenMobileMenu(!openMobileMenu)
             }}
-            className={`text-white px-10 py-5 text-xl text-center hover:bg-gradient-to-r hover:from-indigo-800 hover:to-purple-950 hover:cursor-pointer ${
+            className={`text-white px-10 py-5 text-xl text-center hover:bg-[#112540] hover:cursor-pointer ${
               openMobileMenu ? "" : "hidden"
             }`}
           >
@@ -148,7 +148,7 @@ const Navbar: React.FC<NavbarProps> = ({ onClick, aboutRef, projectRef, experien
             onClick={() => {
               setOpenMobileMenu(!openMobileMenu)
             }}
-            className={`text-white px-10 py-5 text-xl text-center hover:bg-gradient-to-r hover:from-indigo-800 hover:to-purple-950 hover:cursor-pointer ${
+            className={`text-white px-10 py-5 text-xl text-center hover:bg-[#112540] hover:cursor-pointer ${
               openMobileMenu ? "" : "hidden"
             }`}
           >

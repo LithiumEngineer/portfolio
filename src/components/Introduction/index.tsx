@@ -32,13 +32,10 @@ const Introduction = () => {
             Waterloo CS &apos;28 | Seeking Summer 2024 Internships
           </div>
           <div className="text-xl mt-2 text-[#cdd3f7] text-opacity-80 text-justify">
-            Hi, I&apos;m Kevin! I&apos;m a software developer who loves to use technology to build cool projects!
+            Hi, I&apos;m Kevin! I&apos;m a software developer who loves to use
+            technology to build cool projects!
           </div>
-          <div className="flex items-center text-xl mt-2 text-[#cdd3f7] text-opacity-80 text-justify">
-            <p style={{marginRight: '10px'}}>Current Mood: </p>
-            <p className="inline text-5xl">😎</p> 
-            {/* <p className="inline text-sm" style={{marginLeft: '10px'}}> (using Weather API) </p> */}
-          </div>
+
           <div className="w-fit mx-auto">
             <a href="mailto:haochenkang.business@gmail.com">
               <div className="w-fit h-fit px-5 py-2 mt-10 mx-auto text-[#90ff42] rounded-sm border-2 border-[#90ff42] hover:text-[#5a9e2a] hover:border-[#5a9e2a] hover:cursor-pointer active:scale-95 duration-300 ">
