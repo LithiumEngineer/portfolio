@@ -16,10 +16,10 @@ const Education = () => {
 
   return (
     <div className="flex flex-col h-fit">
-      <div className="flex items-center mx-auto w-fit py-10">
+      <div className="flex items-center mx-auto w-fit pt-32 pb-10">
         <div className="flex-grow h-[1px] w-[80px] bg-[#3b426b] rounded-full "></div>
         <div
-          className={`text-3xl mx-10 text-[#cdd3f7] ${montserrat600.className}`}
+          className={`text-5xl mx-10 text-[#cdd3f7] ${montserrat600.className}`}
         >
           Education
         </div>

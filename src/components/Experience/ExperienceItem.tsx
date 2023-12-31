@@ -33,7 +33,7 @@ const ExperienceItem: React.FC<Props> = ({
 }) => {
   return (
     <div
-      className="flex max-w-[600px] w-fit h-fit mx-5 my-10 "
+      className="flex max-w-[600px] w-fit h-fit mx-5 mb-10 "
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
