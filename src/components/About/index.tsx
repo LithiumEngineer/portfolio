@@ -35,7 +35,7 @@ const About = () => {
             <Media />
           </div>
         </div>
-        <div className="flex-1 flex flex-col justify-between h-fit pl-10 pt-5 text-sm min-w-[350px]">
+        <div className="flex-1 flex flex-col justify-between h-fit pl-10 pt-5 text-sm min-w-[350px] max-w-[700px] mx-auto">
           <div>
             Hi! My name is Kevin and I&apos;m currently a{" "}
             <p className="inline text-[#90ff42]">
