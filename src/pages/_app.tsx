@@ -4,7 +4,7 @@ import type { AppProps } from "next/app"
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <link rel="icon" href="/myself.png" />
+      <link rel="icon" href="/favicon.png" />
       <title>Kevin Kang</title>
       <Component {...pageProps} />
     </>
