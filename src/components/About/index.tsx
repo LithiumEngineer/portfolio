@@ -5,6 +5,7 @@ import BulletPoint from "../BulletPoint"
 import NowPlaying from "./NowPlaying"
 import Media from "../Introduction/Media"
 import Language from "./Language"
+import { RxOpenInNewWindow } from "react-icons/rx"
 
 const montserrat600 = Montserrat({
   subsets: ["latin"],
@@ -43,15 +44,34 @@ const About = () => {
             </p>{" "}
             at the{" "}
             <p className="inline text-[#90ff42]">University of Waterloo</p>.
-            <p className="mt-4">
-              I love to build software that make our day-to-day lives easier or
-              that are just cool. So far, I have been working to improve my
-              skills in web development, but in the future I would love to enter
-              the field of AI someday. I also really love algorithms and
-              problem-solving through competitive programming on{" "}
-            </p>
-            <p className="inline text-[#90ff42]">Codeforces</p> and{" "}
-            <p className="inline text-[#90ff42]">Leetcode</p>.
+            <div className="mt-4">
+              <p className="inline">
+                I love to build software that make our day-to-day lives easier
+                or that are just cool. So far, I have been working to improve my
+                skills in web development, but in the future I would love to
+                enter the field of AI someday. I also really love algorithms and
+                problem-solving through competitive programming on{" "}
+              </p>
+              
+              <a
+                className="text-[#90ff42] hover:text-white"
+                href="https://codeforces.com/profile/haochenkang"
+                target="_blank"
+              >
+                <p className="inline">Codeforces</p>
+                <RxOpenInNewWindow className="inline" />
+              </a>
+              and{" "}
+              <a
+                className="text-[#90ff42] hover:text-white"
+                href="https://leetcode.com/haochenkang/"
+                target="_blank"
+              >
+                <p className="inline">Leetcode</p>
+                <RxOpenInNewWindow className="inline" />
+              </a>
+              .
+            </div>
             <p className="mt-4">
               Outside of coding, I love playing badminton or binge watching
               Youtube Shorts. I also love listening to pop music! Check out what
