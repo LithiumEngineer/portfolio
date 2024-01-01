@@ -28,35 +28,42 @@ const useMobile = () => {
 }
 
 interface NavbarProps {
-  onClick: (ref: RefObject<HTMLElement>) => void;
-  aboutRef: RefObject<HTMLElement>;
-  projectRef: RefObject<HTMLElement>;
-  experienceRef: RefObject<HTMLElement>;
+  onClick: (ref: RefObject<HTMLElement>) => void
+  aboutRef: RefObject<HTMLElement>
+  educationRef: RefObject<HTMLElement>
+  projectRef: RefObject<HTMLElement>
+  experienceRef: RefObject<HTMLElement>
 }
 
-const Navbar: React.FC<NavbarProps> = ({ onClick, aboutRef, projectRef, experienceRef }) => {  const mobile = useMobile()
+const Navbar: React.FC<NavbarProps> = ({
+  onClick,
+  aboutRef,
+  educationRef,
+  projectRef,
+  experienceRef,
+}) => {
+  const mobile = useMobile()
   const [openMobileMenu, setOpenMobileMenu] = useState(false)
 
   const clickOutside = (event: React.MouseEvent<HTMLDivElement>) => {
-    const target = event.target as HTMLDivElement;
-  
+    const target = event.target as HTMLDivElement
+
     if (target.classList.contains("outer")) {
       setOpenMobileMenu(false)
     }
   }
 
-
   // When user stretches window wider, the mobile menu will automatically hide
   const handleResize = () => {
     if (window.innerWidth >= 760) {
       setOpenMobileMenu(false)
-    } 
+    }
   }
 
   useEffect(() => {
-    window.addEventListener('resize', handleResize)
+    window.addEventListener("resize", handleResize)
     return () => {
-      window.removeEventListener('resize', handleResize)
+      window.removeEventListener("resize", handleResize)
     }
   })
 
@@ -71,6 +78,12 @@ const Navbar: React.FC<NavbarProps> = ({ onClick, aboutRef, projectRef, experien
               className="px-5 mx-5 text-md text-white rounded-lg py-2 opacity-70 bg-opacity-0 hover:cursor-pointer bg-violet-950 hover:opacity-100 duration-700"
             >
               ABOUT
+            </div>
+            <div
+              onClick={() => onClick(educationRef)}
+              className="px-5 mx-5 text-md text-white rounded-lg py-2 opacity-70 bg-opacity-0 hover:cursor-pointer bg-violet-950 hover:opacity-100 duration-700"
+            >
+              EDUCATION
             </div>
             <div
               onClick={() => onClick(experienceRef)}
@@ -100,27 +113,32 @@ const Navbar: React.FC<NavbarProps> = ({ onClick, aboutRef, projectRef, experien
       </div>
 
       {/* Outer div is for detecting when user clicks outside navbar */}
-      <div onClick={clickOutside} className={`outer absolute w-screen ${openMobileMenu ? "h-[calc(100vh-70px)]" : "h-0"} duration-300`}> 
+      <div
+        onClick={clickOutside}
+        className={`outer absolute w-screen ${
+          openMobileMenu ? "h-[calc(100vh-70px)]" : "h-0"
+        } duration-300`}
+      >
         <div
           className={`absolute right-0 w-screen bg-[#0b1b2d] opacity-95 z-30
           ${openMobileMenu ? "h-[220px]" : "h-0"} expand-effect
         `}
         >
           <style jsx>{`
-        @keyframes expand {
-          0% {
-            height: 0
-          }
-          100% {
-            height: 100%
-          }
-        }
+            @keyframes expand {
+              0% {
+                height: 0;
+              }
+              100% {
+                height: 100%;
+              }
+            }
 
-        .expand-effect {
-          animation: expand 2s ease-in-out;
-          animation-fill-mode: forward;
-        }
-      `}</style>
+            .expand-effect {
+              animation: expand 2s ease-in-out;
+              animation-fill-mode: forward;
+            }
+          `}</style>
           <div
             onClick={() => {
               onClick(experienceRef)

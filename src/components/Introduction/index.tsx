@@ -17,7 +17,7 @@ const inter700 = Inter({
 
 const Introduction = () => {
   return (
-    <div className="w-screen h-fit mt-20">
+    <div className="w-screen h-fit min-h-[calc(100vh-200px)] mt-20">
       <div className="flex-1 flex flex-wrap flex-row-reverse items-center justify-around pt-20">
         <div className="w-fit h-fit mx-10">
           <WaveHand />

@@ -32,7 +32,7 @@ const NowPlaying = ({ playing }: Props) => {
 
     const intervalId = setInterval(() => {
       getSong()
-    }, 1000)
+    }, 500)
 
     return () => clearInterval(intervalId)
   }, [token])
@@ -108,7 +108,7 @@ const NowPlaying = ({ playing }: Props) => {
         <>
           <PlayingAnimation />
           <div className="flex flex-col ml-5 w-[calc(100%-60px)]">
-            {/* <a href={link} target="_blank"> */}
+            <a href={link} target="_blank">
             <div className="flex flex-grow justify-between">
               <div className="flex flex-shrink-0 max-w-[calc(100%-100px)]">
                 <img src={imageURL} className="h-[40px] w-[40px]"></img>
@@ -126,7 +126,7 @@ const NowPlaying = ({ playing }: Props) => {
                 <span style={{ marginLeft: "2px" }}>API</span>
               </div>
             </div>
-            {/* </a> */}
+            </a>
 
             <div className="flex items-center mr-5 w-auto h-fit">
               <div className="flex-grow relative h-[2px] bg-[#6e6e6e] rounded-full mr-5">

@@ -8,13 +8,14 @@ import Projects from "@/components/Projects"
 import { RefObject, useRef } from "react"
 
 export default function Home() {
-  const projectRef = useRef(null)
-  const experienceRef = useRef(null)
   const aboutRef = useRef(null)
+  const educationRef = useRef(null)
+  const experienceRef = useRef(null)
+  const projectRef = useRef(null)
 
   const scroll = (ref: RefObject<HTMLElement>) => {
     if (ref.current) {
-      const pos = ref.current.getBoundingClientRect().top + window.scrollY - 70
+      const pos = ref.current.getBoundingClientRect().top + window.scrollY 
       window.scrollTo({ top: pos, behavior: "smooth" })
     }
   }
@@ -24,6 +25,7 @@ export default function Home() {
       <Navbar
         onClick={scroll}
         aboutRef={aboutRef}
+        educationRef={educationRef}
         projectRef={projectRef}
         experienceRef={experienceRef}
       />
@@ -31,7 +33,7 @@ export default function Home() {
       <div ref={aboutRef}>
         <About />
       </div>
-      <div>
+      <div ref={educationRef}>
         <Education />
       </div>
       <div ref={experienceRef}>

@@ -52,7 +52,6 @@ const About = () => {
                 enter the field of AI someday. I also really love algorithms and
                 problem-solving through competitive programming on{" "}
               </p>
-              
               <a
                 className="text-[#90ff42] hover:text-white"
                 href="https://codeforces.com/profile/haochenkang"
@@ -60,7 +59,7 @@ const About = () => {
               >
                 <p className="inline">Codeforces</p>
                 <RxOpenInNewWindow className="inline" />
-              </a>
+              </a>{" "}
               and{" "}
               <a
                 className="text-[#90ff42] hover:text-white"
@@ -84,11 +83,11 @@ const About = () => {
         </div>
       </div>
 
-      <div className="text-[#cdd3f7] text-md ml-20 mt-20 font-mono">
+      {/* <div className="text-[#cdd3f7] text-md ml-20 mt-20 font-mono">
         Check out what I have been working with:{" "}
-      </div>
+      </div> */}
 
-      <div className="text-[#cdd3f7] mt-5 mx-10">
+      <div className="text-[#cdd3f7] mt-20 mx-10">
         <div className={`text-2xl w-fit mx-auto ${montserrat600.className}`}>
           Languages
         </div>
@@ -102,7 +101,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="text-[#cdd3f7] mt-10 mx-10">
+      <div className="text-[#cdd3f7] mt-5 mx-10">
         <div className={`text-2xl w-fit mx-auto ${montserrat600.className}`}>
           Frameworks
         </div>
@@ -114,7 +113,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="text-[#cdd3f7] mt-10 mx-10">
+      <div className="text-[#cdd3f7] mt-5 mx-10">
         <div className={`text-2xl w-fit mx-auto ${montserrat600.className}`}>
           Tools
         </div>
