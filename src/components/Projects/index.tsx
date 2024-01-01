@@ -17,6 +17,9 @@ const Projects = () => {
         </div>
         <div className="flex-grow h-[1px] w-auto bg-[#3b426b] rounded-full "></div>
       </div>
+      <div className="text-[#cdd3f7] mx-auto w-fit italic">
+        check back later to check out the projects that I have been working on!
+      </div>
     </div>
   )
 }
