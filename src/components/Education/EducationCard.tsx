@@ -1,5 +1,5 @@
 import { Inter, Montserrat } from "@next/font/google"
-// import { IoMdOpen } from "react-icons/Io"
+import { IoMdOpen } from "react-icons/Io"
 import BulletPoint from "../BulletPoint"
 
 const inter400 = Inter({
@@ -89,7 +89,7 @@ const EducationCard = () => {
                     href="https://uwaterloo.ca/undergraduate-entrance-awards/awards/mathematics-national-scholarships"
                     target="_blank"
                   >
-                    {/* <IoMdOpen className="inline text-[#90ff42] hover:text-white" /> */}
+                    <IoMdOpen className="inline text-[#90ff42] hover:text-white" />
                   </a>
                 </BulletPoint>
                 <BulletPoint className="mt-2">

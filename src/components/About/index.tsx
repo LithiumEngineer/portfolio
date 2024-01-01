@@ -13,7 +13,7 @@ const montserrat600 = Montserrat({
 
 const About = () => {
   return (
-    <div className="w-screen h-fit overflow-hidden">
+    <div className="w-screen h-fit">
       <div className="flex items-center mx-auto w-[calc(100%-50px)] max-w-[700px] pt-32 pb-10">
         <div className="flex-grow h-[1px] w-auto bg-[#3b426b] rounded-full "></div>
         <div
@@ -42,14 +42,16 @@ const About = () => {
               first year Computer Science Co-op student
             </p>{" "}
             at the{" "}
-            <p className="inline text-[#90ff42]">University of Waterloo</p>. 
+            <p className="inline text-[#90ff42]">University of Waterloo</p>.
             <p className="mt-4">
               I love to build software that make our day-to-day lives easier or
               that are just cool. So far, I have been working to improve my
               skills in web development, but in the future I would love to enter
               the field of AI someday. I also really love algorithms and
-              problem-solving through competitive programming.
+              problem-solving through competitive programming on{" "}
             </p>
+            <p className="inline text-[#90ff42]">Codeforces</p> and{" "}
+            <p className="inline text-[#90ff42]">Leetcode</p>.
             <p className="mt-4">
               Outside of coding, I love playing badminton or binge watching
               Youtube Shorts. I also love listening to pop music! Check out what

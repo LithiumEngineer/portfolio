@@ -103,14 +103,14 @@ const NowPlaying = ({ playing }: Props) => {
   }
 
   return (
-    <div className="relative flex items-center h-20 w-full bg-[#122445] rounded-2xl min-w-[350px] max-w-[500px] px-2">
+    <div className="relative flex items-center h-20 w-full bg-[#122445] rounded-2xl min-w-[50px] max-w-[500px] px-2">
       {isPlaying ? (
         <>
           <PlayingAnimation />
           <div className="flex flex-col ml-5 w-[calc(100%-60px)]">
             {/* <a href={link} target="_blank"> */}
             <div className="flex flex-grow justify-between">
-              <div className="flex flex-1">
+              <div className="flex flex-shrink-0 max-w-[calc(100%-100px)]">
                 <img src={imageURL} className="h-[40px] w-[40px]"></img>
                 <div className="overflow-hidden flex flex-col mx-2">
                   <div className="h-[20px] whitespace-nowrap">{song}</div>
