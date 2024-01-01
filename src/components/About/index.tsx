@@ -65,7 +65,12 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="text-[#cdd3f7] mt-20 mx-10">
+
+      <div className="text-[#cdd3f7] text-md ml-20 mt-20 font-mono">
+        Check out what I have been working with:{" "}
+      </div>
+
+      <div className="text-[#cdd3f7] mt-5 mx-10">
         <div className={`text-2xl w-fit mx-auto ${montserrat600.className}`}>
           Languages
         </div>
