@@ -1,6 +1,6 @@
 const PlayingAnimation = () => {
   return (
-    <div className="relative flex items-end h-fit w-fit ml-5">
+    <div className="flex items-end h-fit w-fit ml-5">
       <div className="flex items-end justify-between w-fit h-[20px]">
         <div className="h-[10px] w-[2px] mx-[1px] bg-[#90ff42] fast"></div>
         <div className="h-full w-[2px] mx-[1px] bg-[#90ff42] slow"></div>

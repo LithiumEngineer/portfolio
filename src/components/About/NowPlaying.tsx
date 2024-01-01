@@ -3,7 +3,7 @@ import PlayingAnimation from "./PlayingAnimation"
 import axios from "axios"
 import { useState, useEffect } from "react"
 import getConfig from "next/config"
- 
+
 type Props = {
   playing: boolean
 }
@@ -55,10 +55,16 @@ const NowPlaying = ({ playing }: Props) => {
     try {
       const response = await axios.post(
         tokenUrl,
-        `grant_type=refresh_token&refresh_token=${getConfig().publicRuntimeConfig.REFRESH_TOKEN}`,
-        { 
+        `grant_type=refresh_token&refresh_token=${
+          getConfig().publicRuntimeConfig.REFRESH_TOKEN
+        }`,
+        {
           headers: {
-            Authorization: `Basic ${btoa(`${getConfig().publicRuntimeConfig.CLIENT_ID}:${getConfig().publicRuntimeConfig.CLIENT_SECRET}`)}`,
+            Authorization: `Basic ${btoa(
+              `${getConfig().publicRuntimeConfig.CLIENT_ID}:${
+                getConfig().publicRuntimeConfig.CLIENT_SECRET
+              }`
+            )}`,
             "Content-Type": "application/x-www-form-urlencoded",
           },
         }
@@ -97,30 +103,32 @@ const NowPlaying = ({ playing }: Props) => {
   }
 
   return (
-    <div className="relative flex items-center h-20 w-full bg-[#122445] rounded-2xl max-w-[600px] px-10">
+    <div className="relative flex items-center h-20 w-full bg-[#122445] rounded-2xl min-w-[350px] max-w-[500px] px-2">
       {isPlaying ? (
         <>
-          <div className="absolute flex items-center right-10 top-3 h-fit w-fit">
-            {/* <span style={{ marginRight: "10px" }}>Made with</span> */}
-            <img src="./spotify.png" alt="spotify logo" className="h-5"></img>
-            <span style={{ marginLeft: "2px" }}>API</span>
-          </div>
           <PlayingAnimation />
-          <div className="flex flex-col ml-5 w-full">
-            <a href={link} target="_blank">
-              <div className="flex items-center">
-                <img src={imageURL} className="h-[40px] w-[40px] mr-2"></img>
-                {/* <div className="bg-red-100 "></div> */}
-                <div className="flex flex-col">
-                  <div className="w-[300px] overflow-hidden h-[20px]">
-                    {song}
-                  </div>
+          <div className="flex flex-col ml-5 w-[calc(100%-60px)]">
+            {/* <a href={link} target="_blank"> */}
+            <div className="flex flex-grow justify-between">
+              <div className="flex flex-1">
+                <img src={imageURL} className="h-[40px] w-[40px]"></img>
+                <div className="overflow-hidden flex flex-col mx-2">
+                  <div className="h-[20px] whitespace-nowrap">{song}</div>
                   <div className="text-xs font-bold">{artist}</div>
                 </div>
               </div>
-            </a>
+              <div className="flex items-center h-fit min-w-fit">
+                <img
+                  src="./spotify.png"
+                  alt="spotify logo"
+                  className="h-5"
+                ></img>
+                <span style={{ marginLeft: "2px" }}>API</span>
+              </div>
+            </div>
+            {/* </a> */}
 
-            <div className="flex items-center mr-10 w-auto h-fit">
+            <div className="flex items-center mr-5 w-auto h-fit">
               <div className="flex-grow relative h-[2px] bg-[#6e6e6e] rounded-full mr-5">
                 <div
                   className="absolute top-0 left-0 h-[2px] bg-[#cdd3f7] rounded-full mr-10"
