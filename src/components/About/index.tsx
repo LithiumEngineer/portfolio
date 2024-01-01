@@ -42,11 +42,7 @@ const About = () => {
               first year Computer Science Co-op student
             </p>{" "}
             at the{" "}
-            <p className="inline text-[#90ff42]">University of Waterloo</p>. I
-            am one of the ~10 recipients of the $25,000 René Descartes
-            Mathematics National Scholarship offered by the University of
-            Waterloo for outstanding academic achievements and extracurricular
-            involvement.
+            <p className="inline text-[#90ff42]">University of Waterloo</p>. 
             <p className="mt-4">
               I love to build software that make our day-to-day lives easier or
               that are just cool. So far, I have been working to improve my
