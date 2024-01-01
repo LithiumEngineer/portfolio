@@ -80,6 +80,7 @@ const Experience = () => {
               role="Content Writer"
               time="September 2020 - May 2023"
               img="/wchs.png"
+              url="https://school.cbe.ab.ca/school/WesternCanada/Pages/default.aspx"
               description={[
                 <p key="1">
                   Helped the teacher develop tutorial materials for the Grade 10
@@ -99,6 +100,7 @@ const Experience = () => {
               role="Founder"
               time="September 2021 - May 2023"
               img="/csclub.png"
+              url="https://school.cbe.ab.ca/school/WesternCanada/Pages/default.aspx"
               description={[
                 <p key="1">
                   Conducted weekly lessons on algorithms and data structures in
