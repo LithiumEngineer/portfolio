@@ -17,10 +17,13 @@ const inter700 = Inter({
 
 const Introduction = () => {
   return (
-    <div className="flex flex-col w-screen min-h-[800px] h-screen">
-      <div className="flex-1 flex items-center justify-around pt-20">
-        <div className="tracking-wide w-[560px] text-left font-mono">
-          <div className="text-5xl h-[100px] text-[#DEDEDF]">
+    <div className="w-screen h-fit mt-20">
+      <div className="flex-1 flex flex-wrap flex-row-reverse items-center justify-around pt-20">
+        <div className="w-fit h-fit mx-10">
+          <WaveHand />
+        </div>
+        <div className="tracking-wide w-[560px] text-left font-mono mx-10 mt-10">
+          <div className="text-3xl sm:text-5xl h-[2em] text-[#DEDEDF]">
             <p className="inline">I&apos;m&nbsp;</p>
             <TypewriterEffect
               words={WORDS_ABOUT_ME}
@@ -28,10 +31,10 @@ const Introduction = () => {
               cursor
             />
           </div>
-          <div className="text-lg mt-2 text-[#cdd3f7]">
+          <div className="text-lg mt-5 text-[#cdd3f7]">
             Waterloo CS &apos;28 | Seeking Summer 2024 Internships
           </div>
-          <div className="text-xl mt-2 text-[#cdd3f7] text-opacity-80 text-justify">
+          <div className="text-md sm:text-xl mt-2 text-[#cdd3f7] text-opacity-80">
             Hi, I&apos;m Kevin! I&apos;m a software developer who loves to use
             technology to build cool projects!
           </div>
@@ -44,11 +47,8 @@ const Introduction = () => {
             </a>
           </div>
         </div>
-        <div className="w-fit h-fit">
-          <WaveHand />
-        </div>
       </div>
-      <div className="mx-auto mb-20">
+      <div className="mx-auto mt-20">
         <KnowMore />
       </div>
     </div>

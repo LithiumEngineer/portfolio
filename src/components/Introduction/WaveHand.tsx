@@ -1,7 +1,7 @@
 const WaveHand = () => {
   return (
     <>
-      <div className="inline wave-effect text-9xl">👋</div>
+      <div className="inline wave-effect text-8xl sm:text-9xl">👋</div>
       <style jsx>{`
         @keyframes wave {
           0%,
