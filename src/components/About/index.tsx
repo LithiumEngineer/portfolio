@@ -75,10 +75,19 @@ const About = () => {
           <Language imageURL="/python.png" text="Python" />
           <Language imageURL="/html.png" text="HTML5" />
           <Language imageURL="/css.png" text="CSS3" />
-          <Language imageURL="/js.png" text="JS" />
+          <Language imageURL="/js.png" text="Javascript" />
+        </div>
+      </div>
+
+      <div className="text-[#cdd3f7] mt-10 mx-10">
+        <div className={`text-2xl w-fit mx-auto ${montserrat600.className}`}>
+          Frameworks
+        </div>
+        <div className="mt-2 w-fit flex flex-wrap mx-auto">
           <Language imageURL="/react.png" text="React" />
           <Language imageURL="/next.png" text="Next" />
           <Language imageURL="/tailwind.png" text="Tailwind" />
+          <Language imageURL="/three.png" text="Three.js" />
         </div>
       </div>
 
