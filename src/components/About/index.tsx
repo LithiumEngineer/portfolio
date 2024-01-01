@@ -35,7 +35,7 @@ const About = () => {
             <Media />
           </div>
         </div>
-        <div className="flex-1 flex flex-col justify-between h-fit pl-10 pt-5 text-sm min-w-[350px] max-w-[700px] mx-auto">
+        <div className="flex-1 flex flex-col justify-between h-fit pl-10 pt-5 text-sm min-w-[400px] max-w-[700px] mx-auto">
           <div>
             Hi! My name is Kevin and I&apos;m currently a{" "}
             <p className="inline text-[#90ff42]">
@@ -59,7 +59,7 @@ const About = () => {
               Youtube Shorts. I also love listening to pop music! Check out what
               I&apos;m currently listening to:
             </p>
-            <div className="mt-5 w-fit mx-auto">
+            <div className="mt-5 w-full mx-auto">
               <NowPlaying playing />
             </div>
           </div>
