@@ -9,7 +9,7 @@ const montserrat600 = Montserrat({
 })
 
 const Experience = () => {
-  const [hover, setHover] = useState(0)
+  const [hover, setHover] = useState("none")
 
   return (
     <div className="w-screen h-fit">
@@ -46,9 +46,9 @@ const Experience = () => {
                   of the blockchain ecosystem.
                 </p>,
               ]}
-              onMouseEnter={() => setHover(6)}
-              onMouseLeave={() => setHover(0)}
-              isHovered={hover == 6}
+              onMouseEnter={() => setHover("ecssen2")}
+              onMouseLeave={() => setHover("none")}
+              isHovered={hover == "ecssen2"}
             />
             <ExperienceItem
               title="ECSSEN Career School"
@@ -71,9 +71,9 @@ const Experience = () => {
                   and reviewed and approved GitHub pull requests.
                 </p>,
               ]}
-              onMouseEnter={() => setHover(5)}
-              onMouseLeave={() => setHover(0)}
-              isHovered={hover == 5}
+              onMouseEnter={() => setHover("ecssen1")}
+              onMouseLeave={() => setHover("none")}
+              isHovered={hover == "ecssen1"}
             />
             <ExperienceItem
               title="Western Canada High School Robotics Lab"
@@ -91,9 +91,9 @@ const Experience = () => {
                   wrote a RobotC programming textbook.
                 </p>,
               ]}
-              onMouseEnter={() => setHover(4)}
-              onMouseLeave={() => setHover(0)}
-              isHovered={hover == 4}
+              onMouseEnter={() => setHover("robotics")}
+              onMouseLeave={() => setHover("none")}
+              isHovered={hover == "robotics"}
             />
             <ExperienceItem
               title="WCHS Computer Science Club"
@@ -112,9 +112,9 @@ const Experience = () => {
                   allowing members to submit and verify their solutions.
                 </p>,
               ]}
-              onMouseEnter={() => setHover(3)}
-              onMouseLeave={() => setHover(0)}
-              isHovered={hover == 3}
+              onMouseEnter={() => setHover("csclub")}
+              onMouseLeave={() => setHover("none")}
+              isHovered={hover == "csclub"}
             />
             <ExperienceItem
               title="KFC"
@@ -123,17 +123,41 @@ const Experience = () => {
               img="/kfc.png"
               description={[
                 <p key="1">
+                  Assigned with the burger station duty, memorized the recipe
+                  for and assembled 10+ types of chicken burgers and wraps.
+                </p>,
+                <p key="2">
                   Cooperated and communicated with co-workers effectively to
                   ensure quick and up to standards delivery of food.
                 </p>,
-                <p key="2">
+                <p key="3">
                   Learned to deal with stress and work under a fast-paced
                   environment to satisfy customer needs.
                 </p>,
               ]}
-              onMouseEnter={() => setHover(2)}
-              onMouseLeave={() => setHover(0)}
-              isHovered={hover == 2}
+              onMouseEnter={() => setHover("kfc")}
+              onMouseLeave={() => setHover("none")}
+              isHovered={hover == "kfc"}
+            />
+            <ExperienceItem
+              title="Pho Thanh Nga"
+              role="Server, Clerk"
+              time="May 2023 - July 2023"
+              img="/pho.png"
+              description={[
+                <p key="1">
+                  Assisted customers with dietary restrictions and food
+                  allergies by recommending appropriate dishes
+                </p>,
+                <p key="2">
+                  Learned how to provide excellent customer service,
+                  consistently upholding a friendly attitude while interacting
+                  with diverse customers.
+                </p>,
+              ]}
+              onMouseEnter={() => setHover("pho")}
+              onMouseLeave={() => setHover("none")}
+              isHovered={hover == "pho"}
             />
           </li>
         </ul>
