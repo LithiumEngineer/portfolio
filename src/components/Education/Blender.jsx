@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export function Model(props) {
-  const { nodes, materials } = useGLTF('/test4.glb')
+  const { nodes, materials } = useGLTF('/DC.glb')
   return (
     <group {...props} dispose={null}>
       <group position={[1.513, -1.271, -4.063]}>
