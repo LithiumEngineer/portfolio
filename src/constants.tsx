@@ -23,19 +23,3 @@ export const FOOTER_WORDS = [
   "Feel free to contact me for work!",
 ]
 export const FOOTER_WORDS_COLOR = ["#cdd3f7", "#cdd3f7", "#cdd3f7"]
-
-export const LANGUAGES = [
-  ["Java", "C++", "Python"],
-  ["HTML5", "CSS3", "JavaScript"],
-  ["React/NextJS", "Tailwind CSS"],
-]
-export const LANGUAGES_YEARS = [
-  "4+ Years",
-  "6+ Years",
-  "2+ Years",
-  "5+ Years",
-  "5+ Years",
-  "5+ Years",
-  "2+ Years",
-  "2+ Years",
-]

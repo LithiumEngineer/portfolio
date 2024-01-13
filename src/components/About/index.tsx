@@ -92,12 +92,16 @@ const About = () => {
           Languages
         </div>
         <div className="mt-2 w-fit flex flex-wrap mx-auto">
-          <Language imageURL="/cpp.png" text="C++" />
           <Language imageURL="/java.png" text="Java" />
           <Language imageURL="/python.png" text="Python" />
+          <Language imageURL="/cpp.png" text="C++" />
+          <Language imageURL="/js.png" text="JavaScript" />
+          <Language imageURL="/ts.png" text="TypeScript " />
+          <Language imageURL="/sql.png" text="SQL" />
           <Language imageURL="/html.png" text="HTML5" />
           <Language imageURL="/css.png" text="CSS3" />
-          <Language imageURL="/js.png" text="Javascript" />
+          <Language imageURL="/graphql.png" text="Graph QL" />
+          <Language imageURL="/racket.png" text="Racket" />
         </div>
       </div>
 
@@ -107,9 +111,12 @@ const About = () => {
         </div>
         <div className="mt-2 w-fit flex flex-wrap mx-auto">
           <Language imageURL="/react.png" text="React" />
+          <Language imageURL="/node.png" text="Node" />
           <Language imageURL="/next.png" text="Next" />
           <Language imageURL="/tailwind.png" text="Tailwind" />
           <Language imageURL="/three.png" text="Three.js" />
+          <Language imageURL="/tensorflow.png" text="Tensorflow" />
+          <Language imageURL="/oauth.png" text="OAuth" />
         </div>
       </div>
 
@@ -118,12 +125,15 @@ const About = () => {
           Tools
         </div>
         <div className="mt-2 w-fit flex flex-wrap mx-auto">
+          <Language imageURL="/git.png" text="Git" />
+          <Language imageURL="/github.png" text="GitHub" />
+          <Language imageURL="/aws.png" text="AWS" />
+          <Language imageURL="/dynamodb.png" text="DynamoDB" />
+          <Language imageURL="/figma.png" text="Figma" />
           <Language imageURL="/blender.png" text="Blender" />
           <Language imageURL="/jira.png" text="Jira" />
-          <Language imageURL="/git.png" text="Git" />
           <Language imageURL="/polygon.png" text="Blockchain" />
-          <Language imageURL="/figma.png" text="Figma" />
-          <Language imageURL="/aws.png" text="AWS" />
+          <Language imageURL="/web3.png" text="Web3" />
         </div>
       </div>
     </div>
