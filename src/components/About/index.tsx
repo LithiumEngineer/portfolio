@@ -1,6 +1,5 @@
 import { Montserrat } from "@next/font/google"
 import EducationCard from "../Education/EducationCard"
-import { LANGUAGES, LANGUAGES_YEARS } from "@/constants"
 import BulletPoint from "../BulletPoint"
 import NowPlaying from "./NowPlaying"
 import Media from "../Introduction/Media"
