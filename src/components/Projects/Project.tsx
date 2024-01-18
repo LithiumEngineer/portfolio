@@ -58,7 +58,7 @@ const Project = ({
           {languages.map((value, idx) => (
             <>
               {idx != 0 && <div className="inline">&nbsp;&nbsp;</div>}
-              <div key={value} className={`inline text-[${color(value)}]`}>
+              <div key={value} className={`inline text-[#2d922f]`}>
                 {value}
               </div>
             </>
