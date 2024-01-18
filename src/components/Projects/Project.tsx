@@ -26,7 +26,7 @@ const Project = ({
   imageURL,
 }: Props) => {
   const color = (text: string) => {
-    // language = #2d922f
+    // language = #2d922f 
     if (text == "#Java") return "#2d922f"
     
 
