@@ -8,7 +8,7 @@ const montserrat600 = Montserrat({
 
 const Projects = () => {
   return (
-    <div className="w-screen h-screen">
+    <div className="w-screen h-fit">
       <div className="flex items-center mx-auto w-[calc(100%-50px)] max-w-[700px] pt-32 pb-10">
         <div className="flex-grow h-[1px] w-auto bg-[#3b426b] rounded-full "></div>
         <div
@@ -18,13 +18,27 @@ const Projects = () => {
         </div>
         <div className="flex-grow h-[1px] w-auto bg-[#3b426b] rounded-full "></div>
       </div>
-      <div className="flex flex-wrap w-full h-fit mx-10">
+      <div className="flex flex-wrap w-fit h-fit mx-auto">
+        <Project
+          title="Dayly"
+          description="A React web application with minimalist design that combines calendar, to-do, and weather forecast into one."
+          languages={["#React", "#Node.js", "#Tailwind CSS", "#AWS"]}
+          githubURL="https://github.com/LithiumEngineer/dayly"
+          imageURL="./calendar.png"
+        />
         <Project
           title="Pandemic Simulation"
           description="Models the spread of a pandemic based on airport connections based on several statistical and probability models."
           languages={["#Java", "#Java Swing"]}
           githubURL="https://github.com/LithiumEngineer/Pandemic-Simulation-Software"
           imageURL="./virus.png"
+        />
+        <Project
+          title="Sudoku Solver"
+          description="Sudoku solver that solves any sudoku by using four logic cycles and a guessing algorithm with backtracking."
+          languages={["#Java"]}
+          githubURL="https://github.com/LithiumEngineer/Sudoku-Solver"
+          imageURL="./brain.png"
         />
       </div>
     </div>

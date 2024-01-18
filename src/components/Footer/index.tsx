@@ -4,7 +4,7 @@ import { FOOTER_WORDS, FOOTER_WORDS_COLOR } from "@/constants"
 
 const Footer = () => {
   return (
-    <div className="w-screen pb-14">
+    <div className="w-screen mt-20 pb-14">
       <div className="text-center mx-auto h-[1em]">
         <TypewriterEffect words={FOOTER_WORDS} colors={FOOTER_WORDS_COLOR} cursor={false} />
       </div>
