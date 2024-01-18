@@ -40,7 +40,7 @@ const Introduction = () => {
           </div>
 
           <div className="flex w-fit mx-auto">
-            <a href="mailto:haochenkang.business@gmail.com">
+            <a href="mailto:k8kang@uwaterloo.ca">
               <div className="w-fit h-fit px-5 py-2 mt-10 mx-auto text-[#90ff42] rounded-sm border-2 border-[#90ff42] hover:text-[#5a9e2a] hover:border-[#5a9e2a] hover:cursor-pointer active:scale-95 duration-300 ">
                 Hire me
               </div>
