@@ -1,4 +1,5 @@
 import { Montserrat } from "@next/font/google"
+import Project from "./Project"
 
 const montserrat600 = Montserrat({
   subsets: ["latin"],
@@ -17,8 +18,14 @@ const Projects = () => {
         </div>
         <div className="flex-grow h-[1px] w-auto bg-[#3b426b] rounded-full "></div>
       </div>
-      <div className="text-[#cdd3f7] mx-auto w-fit italic">
-        Come back later to check out the projects that I have been working on!
+      <div className="flex flex-wrap w-full h-fit mx-10">
+        <Project
+          title="Pandemic Simulation"
+          description="Models the spread of a pandemic based on airport connections based on several statistical and probability models."
+          languages={["#Java", "#Java Swing"]}
+          githubURL="https://github.com/LithiumEngineer/Pandemic-Simulation-Software"
+          imageURL="./virus.png"
+        />
       </div>
     </div>
   )
