@@ -40,6 +40,20 @@ const Projects = () => {
           githubURL="https://github.com/LithiumEngineer/Sudoku-Solver"
           imageURL="./brain.png"
         />
+        <Project
+          title="A* Path Finding"
+          description="A CLI game that lets you input starting location, ending location, walls, and finds the shortest path from start to end using A*."
+          languages={["#Java"]}
+          githubURL="https://github.com/LithiumEngineer/A-Path-Finding"
+          imageURL="./cave.png"
+        />
+        {/* <Project
+          title="Flood Game"
+          description="A CLI game that replicates the classic game Flood-It"
+          languages={["#Java"]}
+          githubURL="https://github.com/LithiumEngineer/Flood-game"
+          imageURL="./flood.png"
+        /> */}
       </div>
     </div>
   )
