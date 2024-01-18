@@ -26,18 +26,16 @@ const Project = ({
   imageURL,
 }: Props) => {
   const color = (text: string) => {
-    // language = #2d922f 
+    // language = #2d922f
     if (text == "#Java") return "#2d922f"
-    
-
     // framework = #5291e9
-    if (text == "#React") return "#5291e9"
-    if (text == "#Tailwind CSS") return "#5291e9"
-    if (text == "#Node.js") return "#5291e9"
-    if (text == "#Java Swing") return "#5291e9"
-
+    else if (text == "#React") return "#5291e9"
+    else if (text == "#Tailwind CSS") return "#5291e9"
+    else if (text == "#Node.js") return "#5291e9"
+    else if (text == "#Java Swing") return "#5291e9"
     // tool = #eb5050
-    if (text == "#AWS") return "#eb5050"
+    else if (text == "#AWS") return "#eb5050"
+    else return "#ffffff"
   }
   return (
     <div className="relative flex flex-col mx-4 my-4 w-[350px] h-[500px] rounded-3xl bg-[#162c54]">
@@ -46,7 +44,10 @@ const Project = ({
           <img src="./github.png" className="p-2"></img>
         </div>
       </a>
-      <img src={imageURL} className="h-[300px] object-contain mx-10 my-5 rounded-2xl"></img>
+      <img
+        src={imageURL}
+        className="h-[300px] object-contain mx-10 my-5 rounded-2xl"
+      ></img>
       <div className="flex flex-col mx-auto px-5">
         <div
           className={`text-[#ededfd] text-2xl ${inter600.className} tracking-normal`}
@@ -58,7 +59,11 @@ const Project = ({
           {languages.map((value, idx) => (
             <>
               {idx != 0 && <div className="inline">&nbsp;&nbsp;</div>}
-              <div key={value} className={`inline text-[#2d922f]`}>
+              <div
+                key={value}
+                style={{ color: color(value) }}
+                className={`inline`}
+              >
                 {value}
               </div>
             </>
