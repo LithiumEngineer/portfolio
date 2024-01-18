@@ -39,10 +39,15 @@ const Introduction = () => {
             technology to build cool projects!
           </div>
 
-          <div className="w-fit mx-auto">
+          <div className="flex w-fit mx-auto">
             <a href="mailto:haochenkang.business@gmail.com">
               <div className="w-fit h-fit px-5 py-2 mt-10 mx-auto text-[#90ff42] rounded-sm border-2 border-[#90ff42] hover:text-[#5a9e2a] hover:border-[#5a9e2a] hover:cursor-pointer active:scale-95 duration-300 ">
                 Hire me
+              </div>
+            </a>
+            <a href="/resume.pdf" target="_blank">
+              <div className="w-fit h-fit ml-5 px-5 py-2 mt-10 mx-auto text-[#67e9e0] rounded-sm border-2 border-[#67e9e0] hover:text-[#50b6af] hover:border-[#50b6af] hover:cursor-pointer active:scale-95 duration-300 ">
+                Resume
               </div>
             </a>
           </div>
