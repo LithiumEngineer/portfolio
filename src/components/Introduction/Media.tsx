@@ -36,7 +36,7 @@ const Media = () => {
       <PopupModal
         open={openDiscord}
         onClose={() => setOpenDiscordModal(false)}
-        text={"Buff Teemo#9323"}
+        text={"koolkangaroooo"}
       />
       <PopupModal
         open={openEmail}
