@@ -1,5 +1,6 @@
 import { Montserrat } from "@next/font/google"
 import Project from "./Project"
+import Header from "../Header"
 
 const montserrat600 = Montserrat({
   subsets: ["latin"],
@@ -9,15 +10,7 @@ const montserrat600 = Montserrat({
 const Projects = () => {
   return (
     <div className="w-screen h-fit">
-      <div className="flex items-center mx-auto w-[calc(100%-50px)] max-w-[700px] pt-32 pb-10">
-        <div className="flex-grow h-[1px] w-auto bg-[#3b426b] rounded-full "></div>
-        <div
-          className={`text-5xl mx-10 text-[#cdd3f7] ${montserrat600.className}`}
-        >
-          Projects
-        </div>
-        <div className="flex-grow h-[1px] w-auto bg-[#3b426b] rounded-full "></div>
-      </div>
+      <Header title="Projects" />
       <div className="flex flex-wrap w-fit h-fit mx-auto">
         <Project
           title="Dayly"

@@ -5,6 +5,7 @@ import NowPlaying from "./NowPlaying"
 import Media from "../Introduction/Media"
 import Language from "./Language"
 import { RxOpenInNewWindow } from "react-icons/rx"
+import Header from "../Header"
 
 const montserrat600 = Montserrat({
   subsets: ["latin"],
@@ -14,15 +15,7 @@ const montserrat600 = Montserrat({
 const About = () => {
   return (
     <div className="w-screen h-fit">
-      <div className="flex items-center mx-auto w-[calc(100%-50px)] max-w-[700px] pt-32 pb-10">
-        <div className="flex-grow h-[1px] w-auto bg-[#3b426b] rounded-full "></div>
-        <div
-          className={`text-5xl mx-10 text-[#cdd3f7] ${montserrat600.className}`}
-        >
-          About me
-        </div>
-        <div className="flex-grow h-[1px] w-auto bg-[#3b426b] rounded-full "></div>
-      </div>
+      <Header title="About Me" />
 
       <div className="flex flex-grow flex-wrap w-full px-10 text-[#cdd3f7] text-md font-mono">
         <div className="flex flex-col min-w-[300px] mx-auto">

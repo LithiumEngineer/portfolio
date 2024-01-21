@@ -5,6 +5,7 @@ import { Canvas } from "@react-three/fiber"
 import { OrbitControls } from "@react-three/drei"
 import EducationCard from "./EducationCard"
 import Cards from "./Cards"
+import Header from "../Header"
 
 const montserrat600 = Montserrat({
   subsets: ["latin"],
@@ -16,15 +17,7 @@ const Education = () => {
 
   return (
     <div className="flex flex-col h-fit">
-      <div className="flex items-center mx-auto w-[calc(100%-50px)] max-w-[700px] pt-32 pb-10">
-        <div className="flex-grow h-[1px] w-auto bg-[#3b426b] rounded-full "></div>
-        <div
-          className={`text-5xl mx-10 text-[#cdd3f7] ${montserrat600.className}`}
-        >
-          Education
-        </div>
-        <div className="flex-grow h-[1px] w-auto bg-[#3b426b] rounded-full "></div>
-      </div>
+      <Header title="Education" />
       <div className="flex-grow flex flex-row-reverse flex-wrap w-full h-fit">
         <div className="flex-1 min-w-[400px] overflow-hidden flex items-center justify-around mr-5 pb-5">
           <div className="min-h-[300px] flex-1 h-4/5">

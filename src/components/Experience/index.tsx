@@ -2,6 +2,7 @@ import { Montserrat } from "@next/font/google"
 import ExperienceItem from "./ExperienceItem"
 import BulletPoint from "../BulletPoint"
 import { useState } from "react"
+import Header from "../Header"
 
 const montserrat600 = Montserrat({
   subsets: ["latin"],
@@ -13,15 +14,7 @@ const Experience = () => {
 
   return (
     <div className="w-screen h-fit">
-      <div className="flex items-center mx-auto w-[calc(100%-50px)] max-w-[700px] pt-32 pb-10">
-        <div className="flex-grow h-[1px] w-auto bg-[#3b426b] rounded-full "></div>
-        <div
-          className={`text-5xl mx-10 text-[#cdd3f7] ${montserrat600.className}`}
-        >
-          Experience
-        </div>
-        <div className="flex-grow h-[1px] w-auto bg-[#3b426b] rounded-full "></div>
-      </div>
+      <Header title="Experience" />
       <div className="mx-auto h-fit w-fit">
         <ul>
           <li>
