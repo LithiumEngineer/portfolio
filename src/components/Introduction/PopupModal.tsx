@@ -60,7 +60,7 @@ const PopupModal = ({ open, onClose, text }: Props) => {
           </div>
         </div>
         {copied && (
-          <div className="absolute -top-7 -right-2 w-fit h-fit px-2 rounded-md bg-[#cfffc3]">
+          <div className="absolute -top-7 -right-2 w-fit h-fit px-2 rounded-md bg-[#cfffc3] text-black">
             Copied!
           </div>
         )}
