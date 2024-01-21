@@ -46,7 +46,7 @@ const Introduction = () => {
               </div>
             </a>
             <a href="/resume.pdf" target="_blank">
-              <div className="w-fit h-fit ml-5 px-5 py-2 mt-10 mx-auto text-[#67e9e0] rounded-sm border-2 border-[#67e9e0] hover:text-[#50b6af] hover:border-[#50b6af] hover:cursor-pointer active:scale-95 duration-300 ">
+              <div className="w-fit h-fit ml-5 px-5 py-2 mt-10 mx-auto text-[#67e9e0] rounded-sm border-2 border-[#67e9e0] hover:text-[#40948e] hover:border-[#40948e] hover:cursor-pointer active:scale-95 duration-300 ">
                 Resume
               </div>
             </a>
