@@ -41,7 +41,7 @@ const Media = () => {
       <PopupModal
         open={openEmail}
         onClose={() => setOpenEmail(false)}
-        text={"haochenkang.business@gmail.com"}
+        text={"k8kang@uwaterloo.ca"}
       />
     </>
   )
