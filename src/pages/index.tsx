@@ -1,4 +1,5 @@
 import About from "@/components/About"
+import Contact from "@/components/Contact"
 import Education from "@/components/Education"
 import Experience from "@/components/Experience"
 import Footer from "@/components/Footer"
@@ -15,7 +16,7 @@ export default function Home() {
 
   const scroll = (ref: RefObject<HTMLElement>) => {
     if (ref.current) {
-      const pos = ref.current.getBoundingClientRect().top + window.scrollY 
+      const pos = ref.current.getBoundingClientRect().top + window.scrollY
       window.scrollTo({ top: pos, behavior: "smooth" })
     }
   }
@@ -42,6 +43,9 @@ export default function Home() {
       <div ref={projectRef}>
         <Projects />
       </div>
+      {/* <div>
+        <Contact />
+      </div> */}
       <Footer />
     </div>
   )
