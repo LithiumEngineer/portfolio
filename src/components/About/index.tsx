@@ -121,6 +121,8 @@ const About = () => {
           <Language imageURL="/github.png" text="GitHub" />
           <Language imageURL="/aws.png" text="AWS" />
           <Language imageURL="/dynamodb.png" text="DynamoDB" />
+          <Language imageURL="/postgresql.png" text="PostgreSQL" />
+          <Language imageURL="/mongodb.png" text="MongoDB" />
           <Language imageURL="/figma.png" text="Figma" />
           <Language imageURL="/blender.png" text="Blender" />
           <Language imageURL="/jira.png" text="Jira" />
