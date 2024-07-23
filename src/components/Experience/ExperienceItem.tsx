@@ -18,6 +18,7 @@ interface Props {
   onMouseEnter?: () => void
   onMouseLeave?: () => void
   isHovered?: boolean
+  smallImage?: boolean
 }
 
 const ExperienceItem: React.FC<Props> = ({
@@ -30,6 +31,7 @@ const ExperienceItem: React.FC<Props> = ({
   onMouseEnter,
   onMouseLeave,
   isHovered,
+  smallImage, 
 }) => {
   return (
     <div
@@ -37,17 +39,20 @@ const ExperienceItem: React.FC<Props> = ({
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
-      <div className="relative min-w-[60px] w-[60px] rounded-full">
+      <div className="relative min-w-[60px] w-[60px] rounded-full ">
         <div className="bg-[#717380] h-[calc(100%+50px)] w-[2px] mx-auto"></div>
         <a href={url} target="_blank">
-          <img
-            src={img}
-            className={`absolute top-0 left-0 w-[60px] h-[60px] ${
+          <div
+            className={`flex items-center justify-around absolute top-0 left-0 w-[60px] h-[60px] bg-white rounded-full border-4 border-solid border-[#e6e6e6] ${
               isHovered && "scale-125"
             } duration-300`}
-          ></img>
+          >
+            <img
+              src={img}
+              className={`w-auto h-auto max-w-full max-h-full ${smallImage && "px-1"}`}
+            ></img>
+          </div>
         </a>
-        {/* <div className="absolute -bottom-4 w-[2px] h-5 bg-[#717380] rounded-full"></div> */}
       </div>
       <div className="ml-5">
         <div className="text-2xl text-[#dfdfdf]">{title}</div>

@@ -19,8 +19,45 @@ const Experience = () => {
         <ul>
           <li>
             <ExperienceItem
+              title="Deep Trekker"
+              role="Software Developer Intern"
+              time="May 2024 - August 2024"
+              img="/DT_Logo.jpg"
+              url="https://www.deeptrekker.com/"
+              description={[
+                <p>
+                  Engineered a remote controller app for underwater ROVs using
+                  React/TypeScript and Node
+                </p>,
+                <p>
+                  Built feature to enable adding waypoints on a map, adding
+                  support for robots to autonomously navigate through
+                  pre-planned routes. Used 3D geometry for route length
+                  estimation and applied mathematical optimizations
+                </p>,
+                <p>
+                  Created API endpoints to add functionality for ultrasonic
+                  sensor, corrosion probe, and GPS heading, as well as data
+                  logging sensor readings to exportable CSV-formatted dive logs
+                </p>,
+                <p>
+                  Designed and implemented a new database schema to improve
+                  existing structure and led database migration from PrismaSQL
+                  to IndexedDB database, improving overall app efficiency by 40%
+                </p>,
+                <p>
+                  Worked on embedded software for underwater robotics systems by
+                  writing a C++ driver for an advanced camera head system
+                </p>,
+              ]}
+              onMouseEnter={() => setHover("deeptrekker")}
+              onMouseLeave={() => setHover("none")}
+              isHovered={hover == "deeptrekker"}
+              smallImage
+            />
+            <ExperienceItem
               title="ECSSEN Career School"
-              role="Software Engineer"
+              role="Software Developer Intern"
               time="June 2022 - August 2022"
               img="/ecssen.png"
               url="https://ecssen.ca/"
@@ -45,7 +82,7 @@ const Experience = () => {
             />
             <ExperienceItem
               title="ECSSEN Career School"
-              role="Software Engineer"
+              role="Software Developer Intern"
               time="June 2023 - August 2023"
               img="/ecssen.png"
               url="https://ecssen.ca/"
@@ -70,7 +107,7 @@ const Experience = () => {
             />
             <ExperienceItem
               title="Western Canada High School Robotics Lab"
-              role="Content Writer"
+              role="Teaching Assistant/Technical Writer"
               time="September 2020 - May 2023"
               img="/wchs.png"
               url="https://school.cbe.ab.ca/school/WesternCanada/Pages/default.aspx"
