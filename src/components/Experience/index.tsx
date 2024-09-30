@@ -1,8 +1,7 @@
 import { Montserrat } from "@next/font/google"
-import ExperienceItem from "./ExperienceItem"
-import BulletPoint from "../BulletPoint"
 import { useState } from "react"
 import Header from "../Header"
+import ExperienceItem from "./ExperienceItem"
 
 const montserrat600 = Montserrat({
   subsets: ["latin"],
@@ -19,6 +18,18 @@ const Experience = () => {
         <ul>
           <li>
             <ExperienceItem
+              title="Shopify (Incoming)"
+              role="Engineering Intern"
+              time="January 2025 - April 2025"
+              img="/shopify.png"
+              url="https://www.shopify.com/"
+              description={[<p>Building products for millions of merchants!</p>]}
+              onMouseEnter={() => setHover("shopify")}
+              onMouseLeave={() => setHover("none")}
+              isHovered={hover == "shopify"}
+              imagePadding={3}
+            />
+            <ExperienceItem
               title="Deep Trekker"
               role="Software Developer Intern"
               time="May 2024 - August 2024"
@@ -26,59 +37,31 @@ const Experience = () => {
               url="https://www.deeptrekker.com/"
               description={[
                 <p>
-                  Engineered a remote controller app for underwater ROVs using
-                  React/TypeScript and Node
+                  Built remote controller, embedded and firmware software for
+                  underwater ROVs used by customers in 80+ countries
                 </p>,
                 <p>
-                  Built feature to enable adding waypoints on a map, adding
-                  support for robots to autonomously navigate through
-                  pre-planned routes. Used 3D geometry for route length
-                  estimation and applied mathematical optimizations
+                  Developed features for autonomous robot navigation, including
+                  interactive waypoint planning, mission management system,
+                  database design and 3D route calculation using analytical
+                  geometry
                 </p>,
                 <p>
-                  Created API endpoints to add functionality for ultrasonic
-                  sensor, corrosion probe, and GPS heading, as well as data
-                  logging sensor readings to exportable CSV-formatted dive logs
+                  Led database migration from PrismaSQL to browser-based
+                  IndexedDB database, improving app efficiency by 40%
                 </p>,
                 <p>
-                  Designed and implemented a new database schema to improve
-                  existing structure and led database migration from PrismaSQL
-                  to IndexedDB database, improving overall app efficiency by 40%
-                </p>,
-                <p>
-                  Worked on embedded software for underwater robotics systems by
-                  writing a C++ driver for an advanced camera head system
+                  Developed embedded software by writing a ROS C++ driver over
+                  UDP/IP protocol for a camera head system featuring multi-axis
+                  rotation and lights, diagnosing and fixing various firmware
+                  bugs
                 </p>,
               ]}
               onMouseEnter={() => setHover("deeptrekker")}
               onMouseLeave={() => setHover("none")}
               isHovered={hover == "deeptrekker"}
-              smallImage
-            />
-            <ExperienceItem
-              title="ECSSEN Career School"
-              role="Software Developer Intern"
-              time="June 2022 - August 2022"
-              img="/ecssen.png"
-              url="https://ecssen.ca/"
-              description={[
-                <p key="1">
-                  A Government of Canada sponsored project to build a
-                  decentralized and transparent volunteer management system
-                  using blockchain technology.
-                </p>,
-                <p key="2">
-                  Built a full-stack website that allows volunteers to record
-                  volunteer hours using smart contracts and Lens Protocol.
-                </p>,
-                <p key="3">
-                  Learned about smart contracts, tokenization, and the benefits
-                  of the blockchain ecosystem.
-                </p>,
-              ]}
-              onMouseEnter={() => setHover("ecssen2")}
-              onMouseLeave={() => setHover("none")}
-              isHovered={hover == "ecssen2"}
+              imagePadding={1}
+              outstanding
             />
             <ExperienceItem
               title="ECSSEN Career School"
@@ -106,6 +89,31 @@ const Experience = () => {
               isHovered={hover == "ecssen1"}
             />
             <ExperienceItem
+              title="ECSSEN Career School"
+              role="Software Developer Intern"
+              time="June 2022 - August 2022"
+              img="/ecssen.png"
+              url="https://ecssen.ca/"
+              description={[
+                <p key="1">
+                  A Government of Canada sponsored project to build a
+                  decentralized and transparent volunteer management system
+                  using blockchain technology.
+                </p>,
+                <p key="2">
+                  Built a full-stack website that allows volunteers to record
+                  volunteer hours using smart contracts and Lens Protocol.
+                </p>,
+                <p key="3">
+                  Learned about smart contracts, tokenization, and the benefits
+                  of the blockchain ecosystem.
+                </p>,
+              ]}
+              onMouseEnter={() => setHover("ecssen2")}
+              onMouseLeave={() => setHover("none")}
+              isHovered={hover == "ecssen2"}
+            />
+            {/* <ExperienceItem
               title="Western Canada High School Robotics Lab"
               role="Teaching Assistant/Technical Writer"
               time="September 2020 - May 2023"
@@ -188,7 +196,7 @@ const Experience = () => {
               onMouseEnter={() => setHover("pho")}
               onMouseLeave={() => setHover("none")}
               isHovered={hover == "pho"}
-            />
+            /> */}
           </li>
         </ul>
       </div>

@@ -1,12 +1,6 @@
+import { Tooltip } from "antd"
 import { ReactNode } from "react"
 import BulletPoint from "../BulletPoint"
-import { FaJava, FaPython } from "react-icons/fa6"
-import {
-  BiLogoCPlusPlus,
-  BiLogoJava,
-  BiLogoPython,
-  BiLogoTypescript,
-} from "react-icons/bi"
 
 interface Props {
   title?: string
@@ -18,7 +12,8 @@ interface Props {
   onMouseEnter?: () => void
   onMouseLeave?: () => void
   isHovered?: boolean
-  smallImage?: boolean
+  imagePadding?: number
+  outstanding?: boolean
 }
 
 const ExperienceItem: React.FC<Props> = ({
@@ -31,11 +26,12 @@ const ExperienceItem: React.FC<Props> = ({
   onMouseEnter,
   onMouseLeave,
   isHovered,
-  smallImage, 
+  imagePadding = 0,
+  outstanding,
 }) => {
   return (
     <div
-      className="flex max-w-[600px] w-fit h-fit mx-5 mb-10 "
+      className="relative flex max-w-[600px] w-fit h-fit mx-5 mb-10 "
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
@@ -47,9 +43,23 @@ const ExperienceItem: React.FC<Props> = ({
               isHovered && "scale-125"
             } duration-300`}
           >
+            <Tooltip
+              title={
+                <>
+                  "<p className="text-orange-500">Outstanding</p>" work-term
+                  evaluation
+                </>
+              }
+            >
+              {outstanding && (
+                <div className="bg-white border-solid border-2 border-slate-200 rounded-full absolute w-6 h-6 -top-2 -right-2 flex justify-around items-center">
+                  🌟
+                </div>
+              )}
+            </Tooltip>
             <img
               src={img}
-              className={`w-auto h-auto max-w-full max-h-full ${smallImage && "px-1"}`}
+              className={`w-auto h-auto max-w-full max-h-full px-${imagePadding}`}
             ></img>
           </div>
         </a>
