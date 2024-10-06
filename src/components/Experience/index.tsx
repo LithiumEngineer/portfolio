@@ -18,20 +18,20 @@ const Experience = () => {
         <ul>
           <li>
             <ExperienceItem
+              key="shopify"
               title="Shopify (Incoming)"
               role="Engineering Intern"
               time="January 2025 - April 2025"
               img="/shopify.png"
               url="https://www.shopify.com/"
-              description={[
-                <p>Building products for merchants.</p>,
-              ]}
+              description={[<p>Building products for merchants.</p>]}
               onMouseEnter={() => setHover("shopify")}
               onMouseLeave={() => setHover("none")}
               isHovered={hover == "shopify"}
               imagePadding={3}
             />
             <ExperienceItem
+              key="dt"
               title="Deep Trekker"
               role="Software Developer Intern"
               time="May 2024 - August 2024"
@@ -66,6 +66,7 @@ const Experience = () => {
               outstanding
             />
             <ExperienceItem
+              key="ecssen2"
               title="ECSSEN Career School"
               role="Software Developer Intern"
               time="June 2023 - August 2023"
@@ -91,6 +92,7 @@ const Experience = () => {
               isHovered={hover == "ecssen1"}
             />
             <ExperienceItem
+              key="ecssen1"
               title="ECSSEN Career School"
               role="Software Developer Intern"
               time="June 2022 - August 2022"
