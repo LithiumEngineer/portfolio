@@ -23,7 +23,9 @@ const Experience = () => {
               time="January 2025 - April 2025"
               img="/shopify.png"
               url="https://www.shopify.com/"
-              description={[<p>Building products for millions of merchants!</p>]}
+              description={[
+                <p>Building products for merchants.</p>,
+              ]}
               onMouseEnter={() => setHover("shopify")}
               onMouseLeave={() => setHover("none")}
               isHovered={hover == "shopify"}

@@ -43,20 +43,23 @@ const ExperienceItem: React.FC<Props> = ({
               isHovered && "scale-125"
             } duration-300`}
           >
-            <Tooltip
-              title={
-                <>
-                  "<p className="text-orange-500">Outstanding</p>" work-term
-                  evaluation
-                </>
-              }
-            >
-              {outstanding && (
+            {outstanding && (
+              <Tooltip
+                title={
+                  <>
+                    <p className="text-xs font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-yellow-500">
+                      Outstanding
+                    </p>
+                    &nbsp;work-term evaluation
+                  </>
+                }
+              >
                 <div className="bg-white border-solid border-2 border-slate-200 rounded-full absolute w-6 h-6 -top-2 -right-2 flex justify-around items-center">
                   🌟
                 </div>
-              )}
-            </Tooltip>
+              </Tooltip>
+            )}
+
             <img
               src={img}
               className={`w-auto h-auto max-w-full max-h-full px-${imagePadding}`}
