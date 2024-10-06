@@ -1,4 +1,4 @@
-import { Inter } from "@next/font/google"
+import { Inter } from "next/font/google"
 import { useState } from "react"
 import { AiOutlineCloseCircle } from "react-icons/ai"
 import { BiCheck, BiCheckCircle } from "react-icons/bi"

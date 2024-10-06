@@ -1,4 +1,4 @@
-import { Montserrat, Orbitron } from "@next/font/google"
+import { Montserrat, Orbitron } from "next/font/google"
 
 const orbitron400 = Orbitron({
     subsets: ["latin"],

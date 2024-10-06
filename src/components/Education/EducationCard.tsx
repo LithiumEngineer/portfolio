@@ -1,4 +1,4 @@
-import { Inter, Montserrat } from "@next/font/google"
+import { Inter, Montserrat } from "next/font/google"
 import { RxOpenInNewWindow } from "react-icons/rx";
 import BulletPoint from "../BulletPoint"
 

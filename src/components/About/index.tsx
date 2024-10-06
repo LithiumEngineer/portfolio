@@ -1,4 +1,4 @@
-import { Montserrat } from "@next/font/google"
+import { Montserrat } from "next/font/google"
 import EducationCard from "../Education/EducationCard"
 import BulletPoint from "../BulletPoint"
 import NowPlaying from "./NowPlaying"

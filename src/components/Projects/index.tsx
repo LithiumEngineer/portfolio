@@ -1,4 +1,4 @@
-import { Montserrat } from "@next/font/google"
+import { Montserrat } from "next/font/google"
 import Project from "./Project"
 import Header from "../Header"
 

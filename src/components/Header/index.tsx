@@ -1,4 +1,4 @@
-import { Montserrat } from "@next/font/google"
+import { Montserrat } from "next/font/google"
 import { FC } from "react"
 
 interface HeaderProps {

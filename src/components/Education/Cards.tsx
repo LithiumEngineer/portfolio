@@ -2,7 +2,7 @@ import Courses from "./Courses"
 import { useState } from "react"
 import { GrLinkNext, GrLinkPrevious } from "react-icons/gr"
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa6"
-import { Inter, Orbitron } from "@next/font/google"
+import { Inter, Orbitron } from "next/font/google"
 
 const inter700 = Inter({
   subsets: ["latin"],

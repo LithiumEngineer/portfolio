@@ -1,4 +1,4 @@
-import { Inter } from "@next/font/google"
+import { Inter } from "next/font/google"
 import { WORDS_ABOUT_ME, WORDS_ABOUT_ME_COLOR } from "@/constants"
 import TypewriterEffect from "./Typewriter"
 import KnowMore from "./ScrollAnimation"

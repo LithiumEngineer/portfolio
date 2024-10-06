@@ -1,4 +1,4 @@
-import { Montserrat } from "@next/font/google"
+import { Montserrat } from "next/font/google"
 import { useState } from "react"
 import Header from "../Header"
 import ExperienceItem from "./ExperienceItem"

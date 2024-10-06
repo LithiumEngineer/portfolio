@@ -1,4 +1,4 @@
-import { Montserrat, Orbitron } from "@next/font/google"
+import { Montserrat, Orbitron } from "next/font/google"
 import BulletPoint from "../BulletPoint"
 import { ReactElement, JSXElementConstructor, ReactNode, PromiseLikeOfReactNode, Key } from "react"
 
