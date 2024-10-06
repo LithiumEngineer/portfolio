@@ -24,7 +24,7 @@ const Experience = () => {
               time="January 2025 - April 2025"
               img="/shopify.png"
               url="https://www.shopify.com/"
-              description={[<p>Building products for merchants.</p>]}
+              description={[<p key="1">Building products for merchants.</p>]}
               onMouseEnter={() => setHover("shopify")}
               onMouseLeave={() => setHover("none")}
               isHovered={hover == "shopify"}
@@ -38,21 +38,21 @@ const Experience = () => {
               img="/DT_Logo.jpg"
               url="https://www.deeptrekker.com/"
               description={[
-                <p>
+                <p key="1">
                   Built remote controller, embedded and firmware software for
                   underwater ROVs used by customers in 80+ countries
                 </p>,
-                <p>
+                <p key="2">
                   Developed features for autonomous robot navigation, including
                   interactive waypoint planning, mission management system,
                   database design and 3D route calculation using analytical
                   geometry
                 </p>,
-                <p>
+                <p key="3">
                   Led database migration from PrismaSQL to browser-based
                   IndexedDB database, improving app efficiency by 40%
                 </p>,
-                <p>
+                <p key="4">
                   Developed embedded software by writing a ROS C++ driver over
                   UDP/IP protocol for a camera head system featuring multi-axis
                   rotation and lights, diagnosing and fixing various firmware
