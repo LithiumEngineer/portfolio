@@ -28,13 +28,19 @@ const Project = ({
   const color = (text: string) => {
     // language = #2d922f
     if (text == "#Java") return "#2d922f"
+    if (text == "#Python") return "#2d922f"
     // framework = #5291e9
     else if (text == "#React") return "#5291e9"
     else if (text == "#Tailwind CSS") return "#5291e9"
     else if (text == "#Node.js") return "#5291e9"
     else if (text == "#Java Swing") return "#5291e9"
+    else if (text == "#Express.js") return "#5291e9"
     // tool = #eb5050
     else if (text == "#AWS") return "#eb5050"
+    else if (text == "#MongoDB") return "#eb5050"
+    else if (text == "#OpenCV") return "#eb5050"
+    else if (text == "#Tesseract") return "#eb5050"
+    else if (text == "#TensorFlow") return "#eb5050"
     else return "#ffffff"
   }
   return (
@@ -46,7 +52,7 @@ const Project = ({
       </a>
       <img
         src={imageURL}
-        className="h-[300px] object-contain mx-10 my-5 rounded-2xl"
+        className="h-[270px] object-contain mx-10 my-5 rounded-2xl"
       ></img>
       <div className="flex flex-col mx-auto px-5">
         <div
@@ -55,18 +61,11 @@ const Project = ({
           {title}
         </div>
         <div className="text-[#999ebc] mt-2 text-sm">{description}</div>
-        <div className="text-sm mt-5">
+        <div className="text-sm mt-5 flex flex-wrap">
           {languages.map((value, idx) => (
-            <>
-              {idx != 0 && <div className="inline">&nbsp;&nbsp;</div>}
-              <div
-                key={value}
-                style={{ color: color(value) }}
-                className={`inline`}
-              >
-                {value}
-              </div>
-            </>
+            <div key={value} className="flex items-center">
+              <span style={{ color: color(value) }}>{value}&nbsp;&nbsp;</span>
+            </div>
           ))}
         </div>
       </div>

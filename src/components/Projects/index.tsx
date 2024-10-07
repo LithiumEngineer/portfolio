@@ -1,6 +1,6 @@
 import { Montserrat } from "next/font/google"
-import Project from "./Project"
 import Header from "../Header"
+import Project from "./Project"
 
 const montserrat600 = Montserrat({
   subsets: ["latin"],
@@ -11,20 +11,34 @@ const Projects = () => {
   return (
     <div className="w-screen h-fit">
       <Header title="Projects" />
-      <div className="flex flex-wrap w-fit h-fit mx-auto">
+      <div className="grid grid-cols-[repeat(auto-fill,minmax(350px,1fr))] gap-4 justify-items-center w-screen px-4">
+        <Project
+          title="MyReceiptify"
+          description="a full-stack finance website using MERN that scans receipts and automatically generate spending reports."
+          languages={[
+            "#React",
+            "#Express.js",
+            "#Node.js",
+            "#MongoDB",
+            "#OpenCV",
+            "#Tesseract",
+          ]}
+          githubURL="https://github.com/LithiumEngineer/MyReceiptify"
+          imageURL="./dollar.png"
+        />
+        <Project
+          title="Posture Detector"
+          description="A Python app based on Tensorflow's deep learning model to accurately assess body posture and send real-time desktop alerts."
+          languages={["#Python", "#OpenCV", "#TensorFlow"]}
+          githubURL="https://github.com/LithiumEngineer/Posture-Detector"
+          imageURL="./chair.png"
+        />
         <Project
           title="Dayly"
           description="A React web application with minimalist design that combines calendar, to-do, and weather forecast into one."
           languages={["#React", "#Node.js", "#Tailwind CSS", "#AWS"]}
           githubURL="https://github.com/LithiumEngineer/dayly"
           imageURL="./calendar.png"
-        />
-        <Project
-          title="Pandemic Simulation"
-          description="Models the spread of a pandemic based on airport connections based on several statistical and probability models."
-          languages={["#Java", "#Java Swing"]}
-          githubURL="https://github.com/LithiumEngineer/Pandemic-Simulation-Software"
-          imageURL="./virus.png"
         />
         <Project
           title="Sudoku Solver"
@@ -40,13 +54,6 @@ const Projects = () => {
           githubURL="https://github.com/LithiumEngineer/A-Path-Finding"
           imageURL="./cave.png"
         />
-        {/* <Project
-          title="Flood Game"
-          description="A CLI game that replicates the classic game Flood-It"
-          languages={["#Java"]}
-          githubURL="https://github.com/LithiumEngineer/Flood-game"
-          imageURL="./flood.png"
-        /> */}
       </div>
     </div>
   )
