@@ -10,7 +10,7 @@ const Footer = () => {
       </div>
       <div className="flex text-[#cdd3f7] h-fit w-fit mx-auto mt-5">
         <BiCopyright className="mr-2 my-auto w-3 h-3" />
-        <div className="w-fit text-xs">Kevin Kang 2023. All Rights Reserved.</div>
+        <div className="w-fit text-xs">Kevin Kang 2024. All Rights Reserved.</div>
       </div>
     </div>
   )

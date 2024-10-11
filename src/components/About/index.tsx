@@ -1,11 +1,9 @@
 import { Montserrat } from "next/font/google"
-import EducationCard from "../Education/EducationCard"
-import BulletPoint from "../BulletPoint"
-import NowPlaying from "./NowPlaying"
-import Media from "../Introduction/Media"
-import Language from "./Language"
 import { RxOpenInNewWindow } from "react-icons/rx"
 import Header from "../Header"
+import Media from "../Introduction/Media"
+import Language from "./Language"
+import NowPlaying from "./NowPlaying"
 
 const montserrat600 = Montserrat({
   subsets: ["latin"],
@@ -93,22 +91,33 @@ const About = () => {
           <Language imageURL="/html.png" text="HTML5" />
           <Language imageURL="/css.png" text="CSS3" />
           <Language imageURL="/graphql.png" text="Graph QL" />
-          <Language imageURL="/racket.png" text="Racket" />
+          <Language imageURL="/swift.png" text="Swift" />
+          <Language imageURL="/r.png" text="R" />
+
+          {/* <Language imageURL="/racket.png" text="Racket" /> */}
         </div>
       </div>
 
       <div className="text-[#cdd3f7] mt-5 mx-10">
         <div className={`text-2xl w-fit mx-auto ${montserrat600.className}`}>
-          Frameworks
+          Frameworks and Libraries
         </div>
         <div className="mt-2 w-fit flex flex-wrap mx-auto">
           <Language imageURL="/react.png" text="React" />
           <Language imageURL="/node.png" text="Node" />
           <Language imageURL="/next.png" text="Next" />
           <Language imageURL="/tailwind.png" text="Tailwind" />
-          <Language imageURL="/three.png" text="Three.js" />
+          {/* <Language imageURL="/three.png" text="Three.js" /> */}
+          <Language imageURL="/pandas.png" text="Pandas" />
+          <Language imageURL="/numpy.png" text="NumPy" />
           <Language imageURL="/tensorflow.png" text="Tensorflow" />
-          <Language imageURL="/oauth.png" text="OAuth" />
+          <Language imageURL="/pytorch.png" text="PyTorch" />
+          <Language imageURL="/opencv.png" text="OpenCV" />
+          <Language imageURL="/matplotlib.png" text="Matplotlib" />
+          <Language imageURL="/scikit.png" text="scikit-learn" />
+          <Language imageURL="/tkinter.png" text="Tkinter" />
+          <Language imageURL="/scipy.png" text="SciPy" />
+          {/* <Language imageURL="/oauth.png" text="OAuth" /> */}
         </div>
       </div>
 
@@ -117,17 +126,22 @@ const About = () => {
           Tools
         </div>
         <div className="mt-2 w-fit flex flex-wrap mx-auto">
-          <Language imageURL="/git.png" text="Git" />
+          {/* <Language imageURL="/git.png" text="Git" /> */}
           <Language imageURL="/github.png" text="GitHub" />
+          <Language imageURL="/linux.png" text="Linux" />
           <Language imageURL="/aws.png" text="AWS" />
+          <Language imageURL="/azure.png" text="Azure" />
           <Language imageURL="/dynamodb.png" text="DynamoDB" />
-          <Language imageURL="/postgresql.png" text="PostgreSQL" />
+          {/* <Language imageURL="/postgresql.png" text="PostgreSQL" /> */}
           <Language imageURL="/mongodb.png" text="MongoDB" />
-          <Language imageURL="/figma.png" text="Figma" />
+          <Language imageURL="/docker.png" text="Docker" />
+          {/* <Language imageURL="/kubernetes.png" text="Kubernetes" /> */}
+          <Language imageURL="/jenkins.png" text="Jenkins" />
+          {/* <Language imageURL="/figma.png" text="Figma" /> */}
           <Language imageURL="/blender.png" text="Blender" />
-          <Language imageURL="/jira.png" text="Jira" />
-          <Language imageURL="/polygon.png" text="Blockchain" />
-          <Language imageURL="/web3.png" text="Web3" />
+          {/* <Language imageURL="/jira.png" text="Jira" /> */}
+          {/* <Language imageURL="/polygon.png" text="Blockchain" /> */}
+          {/* <Language imageURL="/web3.png" text="Web3" /> */}
         </div>
       </div>
     </div>
