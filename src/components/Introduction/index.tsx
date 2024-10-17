@@ -55,7 +55,7 @@ const Introduction = () => {
       </div>
       <div className="mx-auto mt-20">
         <KnowMore />
-      </div>
+      </div> 
     </div>
   )
 }
