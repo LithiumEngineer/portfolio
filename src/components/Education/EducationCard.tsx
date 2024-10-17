@@ -1,5 +1,5 @@
 import { Inter, Montserrat } from "next/font/google"
-import { RxOpenInNewWindow } from "react-icons/rx";
+import { RxOpenInNewWindow } from "react-icons/rx"
 import BulletPoint from "../BulletPoint"
 
 const inter400 = Inter({
@@ -34,11 +34,11 @@ const EducationCard = () => {
         <div className="flex flex-col items-center px-[25px] py-[25px] bg-[#0f263f] rounded-md">
           <div className="flex flex-col w-full ">
             <p
-              className={`text-[#90ff42] text-2xl tracking-wider ${inter600.className}`}
+              className={`text-[#ededfd] text-2xl tracking-wider ${inter600.className}`}
             >
               University of Waterloo
             </p>
-            <p className={`text-[#ededfd] text-base ${inter400.className}`}>
+            <p className={`text-[#cdd3f7] text-base ${inter400.className}`}>
               Bachelor&apos;s of Computer Science (BCS)
             </p>
             <p className="text-[#8b94c1]">
@@ -56,13 +56,20 @@ const EducationCard = () => {
               <ul className="list-disc list-inside">
                 <BulletPoint className="mt-2">
                   <p className={`inline text-[#90ff42]`}>
-                    Computer Science Club{" "}
+                    Computer Science Club , Data Science Club{" "}
                   </p>
                   <p className="inline">member</p>
                 </BulletPoint>
                 <BulletPoint className="mt-2">
-                  <p className={`inline text-[#90ff42]`}>Data Science Club </p>
-                  <p className="inline">member</p>
+                  <p className={`inline text-[#90ff42]`}>
+                    ICPC Local Contests{" "}
+                  </p>
+                </BulletPoint>
+                <BulletPoint className="mt-2">
+                  <p className={`inline text-[#90ff42]`}>
+                    Autonomy Software Developer{" "}
+                  </p>
+                  @ Waterloo Aerial Robotics Group
                 </BulletPoint>
               </ul>
             </div>

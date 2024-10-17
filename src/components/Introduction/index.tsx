@@ -32,7 +32,7 @@ const Introduction = () => {
             />
           </div>
           <div className="text-lg mt-5 text-[#cdd3f7]">
-            Waterloo CS &apos;28 | Seeking Summer 2024 Internships
+            Waterloo CS &apos;28 | Seeking Fall 2025 Internships
           </div>
           <div className="text-md sm:text-xl mt-2 text-[#cdd3f7] text-opacity-80">
             Hi, I&apos;m Kevin! I&apos;m a software developer who loves to use

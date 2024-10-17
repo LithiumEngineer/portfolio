@@ -38,26 +38,33 @@ const Experience = () => {
               img="/DT_Logo.jpg"
               url="https://www.deeptrekker.com/"
               description={[
-                <p key="1">
-                  Built remote controller, embedded and firmware software for
+                <div key="1" className="inline">
+                  Built <p className="inline font-bold">remote controller</p>,{" "}
+                  <p className="inline font-bold">embedded</p> and{" "}
+                  <p className="inline font-bold">firmware</p> software for
                   underwater ROVs used by customers in 80+ countries
-                </p>,
-                <p key="2">
-                  Developed features for autonomous robot navigation, including
-                  interactive waypoint planning, mission management system,
-                  database design and 3D route calculation using analytical
-                  geometry
-                </p>,
-                <p key="3">
-                  Led database migration from PrismaSQL to browser-based
-                  IndexedDB database, improving app efficiency by 40%
-                </p>,
-                <p key="4">
-                  Developed embedded software by writing a ROS C++ driver over
-                  UDP/IP protocol for a camera head system featuring multi-axis
-                  rotation and lights, diagnosing and fixing various firmware
-                  bugs
-                </p>,
+                </div>,
+                <div key="2">
+                  Developed features for{" "}
+                  <p className="inline font-bold">
+                    autonomous robot navigation
+                  </p>
+                  , including interactive waypoint planning, mission management
+                  system, database design and 3D route calculation using
+                  analytical geometry
+                </div>,
+                <div key="3">
+                  Led <p className="inline font-bold">database migration</p>{" "}
+                  from PrismaSQL to browser-based IndexedDB database, improving
+                  app efficiency by <p className="inline font-bold">40%</p>
+                </div>,
+                <div key="4">
+                  Developed embedded software by writing a{" "}
+                  <p className="inline font-bold">ROS C++ driver</p> over{" "}
+                  <p className="inline font-bold">UDP/IP protocol</p> for a
+                  camera head system featuring multi-axis rotation and lights,
+                  diagnosing and fixing various firmware bugs
+                </div>,
               ]}
               onMouseEnter={() => setHover("deeptrekker")}
               onMouseLeave={() => setHover("none")}
