@@ -20,7 +20,7 @@ const Experience = () => {
             <ExperienceItem
               key="shopify"
               title="Shopify (Incoming)"
-              role="Engineering Intern"
+              role="Applied ML Engineer Intern"
               time="January 2025 - April 2025"
               img="/shopify.png"
               url="https://www.shopify.com/"
