@@ -30,6 +30,7 @@ const Experience = () => {
               isHovered={hover == "shopify"}
               imagePadding={3}
             />
+
             <ExperienceItem
               key="dt"
               title="Deep Trekker"
