@@ -30,17 +30,17 @@ const About = () => {
           <div>
             Hi! My name is Kevin and I&apos;m currently a{" "}
             <p className="inline text-[#90ff42]">
-              first year Computer Science Co-op student
+              second year Computer Science Co-op student
             </p>{" "}
             at the{" "}
             <p className="inline text-[#90ff42]">University of Waterloo</p>.
             <div className="mt-4">
               <p className="inline">
                 I love to build software that make our day-to-day lives easier
-                or that are just cool. So far, I have been working to improve my
-                skills in web development, but in the future I would love to
-                enter the field of AI someday. I also really love algorithms and
-                problem-solving through competitive programming on{" "}
+                or that are just cool. I have been working to improve my skills
+                in AI/ML and it is my dream to enter this field someday. I also
+                really love algorithms and problem-solving through competitive
+                programming on{" "}
               </p>
               <a
                 className="text-[#90ff42] hover:text-white"

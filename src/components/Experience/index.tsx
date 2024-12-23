@@ -20,11 +20,11 @@ const Experience = () => {
             <ExperienceItem
               key="shopify"
               title="Shopify (Incoming)"
-              role="Applied ML Engineer Intern"
+              role="Applied ML Engineer"
               time="January 2025 - April 2025"
               img="/shopify.png"
               url="https://www.shopify.com/"
-              description={[<p key="1">Building products for merchants.</p>]}
+              description={[<p key="1">Lending team on Shopify Capital. </p>]}
               onMouseEnter={() => setHover("shopify")}
               onMouseLeave={() => setHover("none")}
               isHovered={hover == "shopify"}
@@ -33,7 +33,7 @@ const Experience = () => {
             <ExperienceItem
               key="dt"
               title="Deep Trekker"
-              role="Software Developer Intern"
+              role="Software Developer"
               time="May 2024 - August 2024"
               img="/DT_Logo.jpg"
               url="https://www.deeptrekker.com/"
@@ -75,7 +75,7 @@ const Experience = () => {
             <ExperienceItem
               key="ecssen2"
               title="ECSSEN Career School"
-              role="Software Developer Intern"
+              role="Software Developer"
               time="June 2023 - August 2023"
               img="/ecssen.png"
               url="https://ecssen.ca/"
@@ -101,7 +101,7 @@ const Experience = () => {
             <ExperienceItem
               key="ecssen1"
               title="ECSSEN Career School"
-              role="Software Developer Intern"
+              role="Software Developer"
               time="June 2022 - August 2022"
               img="/ecssen.png"
               url="https://ecssen.ca/"
