@@ -25,21 +25,21 @@ const Experience = () => {
               img="/shopify.png"
               url="https://www.shopify.com/"
               description={[
-                <p key="1">
+                <div key="1">
                   Built{" "}
                   <p className="inline font-bold">machine learning models</p>{" "}
                   that power Shopify Capital&apos;s credit products
-                </p>,
-                <p key="2">
+                </div>,
+                <div key="2">
                   Implemented new input features through feature engineering,
                   improving error and enhancing{" "}
                   <p className="inline font-bold">model explainability</p>
-                </p>,
-                <p key="3">
+                </div>,
+                <div key="3">
                   Researched variability in shop performance and implemented
                   time-series data transformations to{" "}
                   <p className="inline font-bold">improve model stability</p>
-                </p>,
+                </div>,
               ]}
               onMouseEnter={() => setHover("shopify")}
               onMouseLeave={() => setHover("none")}

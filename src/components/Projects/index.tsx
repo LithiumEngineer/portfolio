@@ -13,8 +13,15 @@ const Projects = () => {
       <Header title="Projects" />
       <div className="grid grid-cols-[repeat(auto-fill,minmax(350px,1fr))] gap-4 justify-items-center w-screen px-4">
         <Project
+          title="Braille Neural Network"
+          description="A supervised neural network that classifies Braille characters, built from scratch."
+          languages={["#Python"]}
+          githubURL="https://github.com/LithiumEngineer/Braille-Neural-Network"
+          imageURL="./brain.png"
+        />
+        <Project
           title="MyReceiptify"
-          description="a full-stack finance website using MERN that scans receipts and automatically generate spending reports."
+          description="A full-stack finance website using MERN that scans receipts and automatically generate spending reports."
           languages={[
             "#React",
             "#Express.js",
@@ -28,7 +35,7 @@ const Projects = () => {
         />
         <Project
           title="Posture Detector"
-          description="A Python app based on Tensorflow's deep learning model to accurately assess body posture and send real-time desktop alerts."
+          description="An AI-powered posture detection app with a Raspberry Pi-equipped chair that nudges your back to help with your posture."
           languages={["#Python", "#OpenCV", "#TensorFlow"]}
           githubURL="https://github.com/LithiumEngineer/Posture-Detector"
           imageURL="./chair.png"
@@ -39,13 +46,6 @@ const Projects = () => {
           languages={["#React", "#Node.js", "#Tailwind CSS", "#AWS"]}
           githubURL="https://github.com/LithiumEngineer/dayly"
           imageURL="./calendar.png"
-        />
-        <Project
-          title="Sudoku Solver"
-          description="Sudoku solver that solves any sudoku by using four logic cycles and a guessing algorithm with backtracking."
-          languages={["#Java"]}
-          githubURL="https://github.com/LithiumEngineer/Sudoku-Solver"
-          imageURL="./brain.png"
         />
         <Project
           title="A* Path Finding"
