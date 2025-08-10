@@ -28,7 +28,7 @@ const Experience = () => {
                 <p key="1">
                   Built{" "}
                   <p className="inline font-bold">machine learning models</p>{" "}
-                  that power Shopify Capital's credit products
+                  that power Shopify Capital&apos;s credit products
                 </p>,
                 <p key="2">
                   Implemented new input features through feature engineering,
