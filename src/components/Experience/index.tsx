@@ -19,22 +19,39 @@ const Experience = () => {
           <li>
             <ExperienceItem
               key="shopify"
-              title="Shopify (Incoming)"
-              role="Applied ML Engineer"
+              title="Shopify "
+              role="Machine Learning Engineer Intern"
               time="January 2025 - April 2025"
               img="/shopify.png"
               url="https://www.shopify.com/"
-              description={[<p key="1">Lending team on Shopify Capital. </p>]}
+              description={[
+                <p key="1">
+                  Built{" "}
+                  <p className="inline font-bold">machine learning models</p>{" "}
+                  that power Shopify Capital's credit products
+                </p>,
+                <p key="2">
+                  Implemented new input features through feature engineering,
+                  improving error and enhancing{" "}
+                  <p className="inline font-bold">model explainability</p>
+                </p>,
+                <p key="3">
+                  Researched variability in shop performance and implemented
+                  time-series data transformations to{" "}
+                  <p className="inline font-bold">improve model stability</p>
+                </p>,
+              ]}
               onMouseEnter={() => setHover("shopify")}
               onMouseLeave={() => setHover("none")}
               isHovered={hover == "shopify"}
               imagePadding={3}
+              outstanding
             />
 
             <ExperienceItem
               key="dt"
               title="Deep Trekker"
-              role="Software Developer"
+              role="Software Developer Intern"
               time="May 2024 - August 2024"
               img="/DT_Logo.jpg"
               url="https://www.deeptrekker.com/"

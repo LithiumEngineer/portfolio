@@ -42,7 +42,7 @@ const EducationCard = () => {
               Bachelor&apos;s of Computer Science (BCS)
             </p>
             <p className="text-[#8b94c1]">
-              Waterloo, ON, Canada · Sept 2023 - Apr 2028 (Expected)
+              Waterloo, ON, Canada · Sept 2023 - Present
             </p>
           </div>
           <div className="w-full h-[1px] my-5 bg-[#3b426b] rounded-full"></div>

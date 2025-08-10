@@ -1,8 +1,7 @@
-import { TbBrandSpotify } from "react-icons/tb"
-import PlayingAnimation from "./PlayingAnimation"
 import axios from "axios"
-import { useState, useEffect } from "react"
 import getConfig from "next/config"
+import { useEffect, useState } from "react"
+import PlayingAnimation from "./PlayingAnimation"
 
 type Props = {
   playing: boolean
