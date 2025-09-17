@@ -14,6 +14,7 @@ interface Props {
   isHovered?: boolean
   imagePadding?: number
   outstanding?: boolean
+  referenceUrl?: string
 }
 
 const ExperienceItem: React.FC<Props> = ({
@@ -28,6 +29,7 @@ const ExperienceItem: React.FC<Props> = ({
   isHovered,
   imagePadding = 0,
   outstanding,
+  referenceUrl,
 }) => {
   return (
     <div
@@ -75,6 +77,18 @@ const ExperienceItem: React.FC<Props> = ({
           } mt-2 duration-300`}
         >
           {role} | {time}
+          {referenceUrl && (
+            <span className="ml-1">
+              |{" "}
+              <a
+                href={referenceUrl}
+                target="_blank"
+                className="hover:underline hover:text-[#b4b9cf]"
+              >
+                Reference Letter
+              </a>
+            </span>
+          )}
         </div>
         <ul
           className={`${

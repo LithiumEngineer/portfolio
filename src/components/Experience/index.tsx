@@ -89,6 +89,7 @@ const Experience = () => {
               isHovered={hover == "deeptrekker"}
               imagePadding={1}
               outstanding
+              referenceUrl="/recommendation.pdf"
             />
             <ExperienceItem
               key="ecssen2"
