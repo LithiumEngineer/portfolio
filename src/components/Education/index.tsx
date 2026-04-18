@@ -18,9 +18,12 @@ const Education = () => {
   return (
     <div className="flex flex-col h-fit">
       <Header title="Education" />
-      <div className="flex-grow flex flex-row-reverse flex-wrap w-full h-fit">
-        <div className="flex-1 min-w-[400px] overflow-hidden flex items-center justify-around mr-5 pb-5">
-          <div className="min-h-[300px] flex-1 h-4/5">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full px-4 sm:px-10">
+        <div className="h-fit">
+          <EducationCard />
+        </div>
+        <div className="hidden lg:flex items-center justify-center">
+          <div className="h-[500px] w-full">
             <Canvas
               camera={{ fov: 100, position: [8, 0, 0] }}
               className="responsive-canvas"
@@ -36,9 +39,6 @@ const Education = () => {
               <Model />
             </Canvas>
           </div>
-        </div>
-        <div className="mx-10 flex-1 min-w-[400px] h-fit">
-          <EducationCard />
         </div>
       </div>
     </div>

@@ -29,12 +29,12 @@ const montserrat500 = Montserrat({
 
 const EducationCard = () => {
   return (
-    <div className="flex-1 h-fit w-full bg-[#162c54] rounded-md">
+    <div className="h-fit w-full bg-[#162c54] rounded-md overflow-hidden">
       <div className="flex flex-col justify-between w-full text-[#cdd3f7]">
-        <div className="flex flex-col items-center px-[25px] py-[25px] bg-[#0f263f] rounded-md">
+        <div className="flex flex-col items-center px-4 sm:px-[25px] py-[25px] bg-[#0f263f] rounded-md break-words">
           <div className="flex flex-col w-full ">
             <p
-              className={`text-[#ededfd] text-2xl tracking-wider ${inter600.className}`}
+              className={`text-[#ededfd] text-xl sm:text-2xl tracking-wider ${inter600.className}`}
             >
               University of Waterloo
             </p>

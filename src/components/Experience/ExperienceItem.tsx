@@ -33,15 +33,15 @@ const ExperienceItem: React.FC<Props> = ({
 }) => {
   return (
     <div
-      className="relative flex max-w-[600px] w-fit h-fit mx-5 mb-10 "
+      className="relative flex max-w-[600px] w-full h-fit mx-0 mb-10 "
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
-      <div className="relative min-w-[60px] w-[60px] rounded-full ">
+      <div className="relative min-w-[40px] w-[40px] sm:min-w-[60px] sm:w-[60px] rounded-full ">
         <div className="bg-[#717380] h-[calc(100%+50px)] w-[2px] mx-auto"></div>
         <a href={url} target="_blank">
           <div
-            className={`flex items-center justify-around absolute top-0 left-0 w-[60px] h-[60px] bg-white rounded-full border-4 border-solid border-[#e6e6e6] ${
+            className={`flex items-center justify-around absolute top-0 left-0 w-[40px] h-[40px] sm:w-[60px] sm:h-[60px] bg-white rounded-full border-4 border-solid border-[#e6e6e6] ${
               isHovered && "scale-125"
             } duration-300`}
           >
@@ -69,10 +69,10 @@ const ExperienceItem: React.FC<Props> = ({
           </div>
         </a>
       </div>
-      <div className="ml-5">
-        <div className="text-2xl text-[#dfdfdf]">{title}</div>
+      <div className="ml-3 sm:ml-5 min-w-0 flex-1">
+        <div className="text-xl sm:text-2xl text-[#dfdfdf]">{title}</div>
         <div
-          className={`text-sm ${
+          className={`text-xs sm:text-sm ${
             isHovered ? "text-[#b4b9cf]" : "text-[#80859d]"
           } mt-2 duration-300`}
         >

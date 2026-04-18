@@ -21,7 +21,7 @@ interface CoursesProps {
 const Courses: React.FC<CoursesProps> = ({ className = "", courses, term }) => {
   return (
     <div className={className}>
-      <div className={`px-8 text-[1.5vw] ${montserrat400.className}`}>
+      <div className={`px-4 sm:px-8 text-sm sm:text-base ${montserrat400.className}`}>
         <p className={`text-base tracking-widest ${montserrat700.className} mb-2`}>
           {term}
         </p>

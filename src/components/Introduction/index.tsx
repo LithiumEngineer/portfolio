@@ -17,12 +17,12 @@ const inter700 = Inter({
 
 const Introduction = () => {
   return (
-    <div className="w-screen h-fit min-h-[calc(100vh-200px)] mt-20">
-      <div className="flex-1 flex flex-wrap flex-row-reverse items-center justify-around pt-20">
-        <div className="w-fit h-fit mx-10">
+    <div className="w-full h-fit min-h-[calc(100vh-200px)] mt-20">
+      <div className="flex-1 flex flex-wrap flex-row-reverse items-center justify-around pt-10 sm:pt-20">
+        <div className="w-fit h-fit mx-6 sm:mx-10">
           <WaveHand />
         </div>
-        <div className="tracking-wide w-[560px] text-left font-mono mx-10 mt-10">
+        <div className="tracking-wide w-full max-w-[560px] text-left font-mono mx-6 sm:mx-10 mt-10">
           <div className="text-3xl sm:text-5xl h-[2em] text-[#DEDEDF]">
             <p className="inline">I&apos;m&nbsp;</p>
             <TypewriterEffect
@@ -53,7 +53,7 @@ const Introduction = () => {
           </div>
         </div>
       </div>
-      <div className="mx-auto mt-20">
+      <div className="mx-auto mt-10 sm:mt-20">
         <KnowMore />
       </div> 
     </div>

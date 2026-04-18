@@ -12,9 +12,9 @@ const Experience = () => {
   const [hover, setHover] = useState("none")
 
   return (
-    <div className="w-screen h-fit">
+    <div className="w-full h-fit">
       <Header title="Experience" />
-      <div className="mx-auto h-fit w-fit">
+      <div className="mx-auto h-fit w-full max-w-[650px] px-4 sm:px-6">
         <ul>
           <li>
             <ExperienceItem

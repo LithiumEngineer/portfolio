@@ -22,7 +22,7 @@ export default function Home() {
   }
 
   return (
-    <div className="bg-[#0b1b2d]">
+    <div className="bg-[#0b1b2d] overflow-x-hidden">
       <Navbar
         onClick={scroll}
         aboutRef={aboutRef}

@@ -33,14 +33,14 @@ const PopupModal = ({ open, onClose, text }: Props) => {
     <div
       onClick={clickOutside}
       style={{ backgroundColor: "rgba(44, 44, 44, 0.90" }}
-      className={`outer fixed flex justify-around items-center top-0 left-0 z-50 h-screen w-screen ${
+      className={`outer fixed flex justify-around items-center top-0 left-0 z-50 h-full w-full ${
         !open && "hidden"
       }`}
     >
-      <div className="relative flex justify-around items-center w-fit h-[50px] rounded-lg bg-[#F9FAFB]">
+      <div className="relative flex justify-around items-center w-fit max-w-[90vw] h-[50px] rounded-lg bg-[#F9FAFB]">
         <div className="flex justify-between h-full w-full items-center">
           <div
-            className={`px-3 grow flex justify-around text-[#383838] text-2xl ${inter500.className}`}
+            className={`px-3 grow flex justify-around text-[#383838] text-lg sm:text-2xl ${inter500.className}`}
           >
             {text}
           </div>

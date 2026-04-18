@@ -9,9 +9,9 @@ const montserrat600 = Montserrat({
 
 const Projects = () => {
   return (
-    <div className="w-screen h-fit">
+    <div className="w-full h-fit">
       <Header title="Projects" />
-      <div className="grid grid-cols-[repeat(auto-fill,minmax(350px,1fr))] gap-4 justify-items-center w-screen px-4">
+      <div className="grid grid-cols-1 sm:grid-cols-[repeat(auto-fill,minmax(350px,1fr))] gap-4 justify-items-center w-full px-4">
         <Project
           title="Braille Neural Network"
           description="A supervised neural network that classifies Braille characters, built from scratch."

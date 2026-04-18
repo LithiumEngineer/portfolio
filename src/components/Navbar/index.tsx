@@ -69,7 +69,7 @@ const Navbar: React.FC<NavbarProps> = ({
 
   return (
     <div className="sticky top-0 z-50 h-0">
-      <div className="flex justify-between items-center w-screen min-w-fit h-[70px] bg-[#0b1b2d] opacity-95">
+      <div className="flex justify-between items-center w-full h-[70px] bg-[#0b1b2d] opacity-95">
         <div className="ml-10 mr-4 text-white">Kevin Kang</div>
         {!mobile && (
           <div className="flex ">
@@ -115,13 +115,13 @@ const Navbar: React.FC<NavbarProps> = ({
       {/* Outer div is for detecting when user clicks outside navbar */}
       <div
         onClick={clickOutside}
-        className={`outer absolute w-screen ${
+        className={`outer absolute w-full ${
           openMobileMenu ? "h-[calc(100vh-70px)]" : "h-0"
         } duration-300`}
       >
         <div
-          className={`absolute right-0 w-screen bg-[#0b1b2d] opacity-95 z-30
-          ${openMobileMenu ? "h-[220px]" : "h-0"} expand-effect
+          className={`absolute right-0 w-full bg-[#0b1b2d] opacity-95 z-30
+          ${openMobileMenu ? "h-[280px]" : "h-0"} expand-effect
         `}
         >
           <style jsx>{`
@@ -141,10 +141,32 @@ const Navbar: React.FC<NavbarProps> = ({
           `}</style>
           <div
             onClick={() => {
+              onClick(aboutRef)
+              setOpenMobileMenu(!openMobileMenu)
+            }}
+            className={`text-white px-10 py-4 text-lg text-center hover:bg-[#112540] hover:cursor-pointer ${
+              openMobileMenu ? "" : "hidden"
+            }`}
+          >
+            ABOUT
+          </div>
+          <div
+            onClick={() => {
+              onClick(educationRef)
+              setOpenMobileMenu(!openMobileMenu)
+            }}
+            className={`text-white px-10 py-4 text-lg text-center hover:bg-[#112540] hover:cursor-pointer ${
+              openMobileMenu ? "" : "hidden"
+            }`}
+          >
+            EDUCATION
+          </div>
+          <div
+            onClick={() => {
               onClick(experienceRef)
               setOpenMobileMenu(!openMobileMenu)
             }}
-            className={`text-white px-10 py-5 text-xl text-center hover:bg-[#112540] hover:cursor-pointer ${
+            className={`text-white px-10 py-4 text-lg text-center hover:bg-[#112540] hover:cursor-pointer ${
               openMobileMenu ? "" : "hidden"
             }`}
           >
@@ -155,22 +177,11 @@ const Navbar: React.FC<NavbarProps> = ({
               onClick(projectRef)
               setOpenMobileMenu(!openMobileMenu)
             }}
-            className={`text-white px-10 py-5 text-xl text-center hover:bg-[#112540] hover:cursor-pointer ${
+            className={`text-white px-10 py-4 text-lg text-center hover:bg-[#112540] hover:cursor-pointer ${
               openMobileMenu ? "" : "hidden"
             }`}
           >
             PROJECTS
-          </div>
-
-          <div
-            onClick={() => {
-              setOpenMobileMenu(!openMobileMenu)
-            }}
-            className={`text-white px-10 py-5 text-xl text-center hover:bg-[#112540] hover:cursor-pointer ${
-              openMobileMenu ? "" : "hidden"
-            }`}
-          >
-            RESUME
           </div>
         </div>
       </div>

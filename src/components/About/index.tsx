@@ -12,21 +12,21 @@ const montserrat600 = Montserrat({
 
 const About = () => {
   return (
-    <div className="w-screen h-fit">
+    <div className="w-full h-fit">
       <Header title="About Me" />
 
-      <div className="flex flex-grow flex-wrap w-full px-10 text-[#cdd3f7] text-md font-mono">
-        <div className="flex flex-col min-w-[300px] mx-auto">
+      <div className="flex flex-col md:flex-row flex-grow w-full px-4 sm:px-10 text-[#cdd3f7] text-md font-mono">
+        <div className="flex flex-col shrink-0 mx-auto items-center">
           <img
             src="./myself.png"
             alt="image of myself"
-            className="rounded-full w-[300px] h-[300px]"
+            className="rounded-full w-[200px] h-[200px] md:w-[300px] md:h-[300px]"
           ></img>
           <div className="flex mx-auto mt-5">
             <Media />
           </div>
         </div>
-        <div className="flex-1 flex flex-col justify-between h-fit pl-10 pt-5 text-sm min-w-[400px] max-w-[700px] mx-auto">
+        <div className="flex-1 flex flex-col justify-between h-fit pl-0 md:pl-10 pt-5 text-sm min-w-0 max-w-[700px] mx-auto">
           <div>
             Hi! My name is Kevin and I&apos;m currently a{" "}
             <p className="inline text-[#90ff42]">
@@ -77,11 +77,11 @@ const About = () => {
         Check out what I have been working with:{" "}
       </div> */}
 
-      <div className="text-[#cdd3f7] mt-20 mx-10">
+      <div className="text-[#cdd3f7] mt-20 mx-4 sm:mx-10">
         <div className={`text-2xl w-fit mx-auto ${montserrat600.className}`}>
           Languages
         </div>
-        <div className="mt-2 w-fit flex flex-wrap mx-auto">
+        <div className="mt-2 w-fit flex flex-wrap mx-auto justify-center">
           <Language imageURL="/java.png" text="Java" />
           <Language imageURL="/python.png" text="Python" />
           <Language imageURL="/cpp.png" text="C++" />
@@ -98,11 +98,11 @@ const About = () => {
         </div>
       </div>
 
-      <div className="text-[#cdd3f7] mt-5 mx-10">
+      <div className="text-[#cdd3f7] mt-5 mx-4 sm:mx-10">
         <div className={`text-2xl w-fit mx-auto ${montserrat600.className}`}>
           Frameworks and Libraries
         </div>
-        <div className="mt-2 w-fit flex flex-wrap mx-auto">
+        <div className="mt-2 w-fit flex flex-wrap mx-auto justify-center">
           <Language imageURL="/react.png" text="React" />
           <Language imageURL="/node.png" text="Node" />
           <Language imageURL="/next.png" text="Next" />
@@ -121,11 +121,11 @@ const About = () => {
         </div>
       </div>
 
-      <div className="text-[#cdd3f7] mt-5 mx-10">
+      <div className="text-[#cdd3f7] mt-5 mx-4 sm:mx-10">
         <div className={`text-2xl w-fit mx-auto ${montserrat600.className}`}>
           Tools
         </div>
-        <div className="mt-2 w-fit flex flex-wrap mx-auto">
+        <div className="mt-2 w-fit flex flex-wrap mx-auto justify-center">
           {/* <Language imageURL="/git.png" text="Git" /> */}
           <Language imageURL="/github.png" text="GitHub" />
           <Language imageURL="/linux.png" text="Linux" />

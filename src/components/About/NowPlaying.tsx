@@ -102,7 +102,7 @@ const NowPlaying = ({ playing }: Props) => {
   }
 
   return (
-    <div className="relative flex items-center h-20 w-full bg-[#122445] rounded-2xl min-w-[50px] max-w-[500px] px-2">
+    <div className="relative flex items-center h-20 w-full bg-[#122445] rounded-2xl max-w-[500px] px-2">
       {isPlaying ? (
         <>
           <PlayingAnimation />

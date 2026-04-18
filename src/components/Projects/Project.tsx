@@ -44,7 +44,7 @@ const Project = ({
     else return "#ffffff"
   }
   return (
-    <div className="relative flex flex-col mx-4 my-4 w-[350px] h-[500px] rounded-3xl bg-[#162c54]">
+    <div className="relative flex flex-col mx-4 my-4 w-full max-w-[350px] h-auto min-h-[500px] rounded-3xl bg-[#162c54]">
       <a href={githubURL} target="_blank">
         <div className="absolute right-5 top-5 w-[50px] h-[50px] bg-white rounded-full">
           <img src="./github.png" className="p-2"></img>
@@ -52,9 +52,9 @@ const Project = ({
       </a>
       <img
         src={imageURL}
-        className="h-[270px] object-contain mx-10 my-5 rounded-2xl"
+        className="h-[270px] object-contain mx-5 sm:mx-10 my-5 rounded-2xl"
       ></img>
-      <div className="flex flex-col mx-auto px-5">
+      <div className="flex flex-col mx-auto px-4 sm:px-5 pb-4">
         <div
           className={`text-[#ededfd] text-2xl ${inter600.className} tracking-normal`}
         >

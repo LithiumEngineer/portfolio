@@ -92,11 +92,11 @@ const Cards: React.FC<CardsProps> = ({ cardIndex, onForward, onPrevious }) => {
     </div>,
   ]
   return (
-    <div className="relative h-full w-[35vw] mx-auto text-[#cdd3f7]">
+    <div className="relative h-full w-[85vw] sm:w-[35vw] mx-auto text-[#cdd3f7]">
       <div
         onAnimationStart={() => setInAnimation(true)}
         onAnimationEnd={() => setInAnimation(false)}
-        className={`absolute flex flex-col justify-between h-full w-[33vw] rounded-md border-[0px] ${
+        className={`absolute flex flex-col justify-between h-full w-[80vw] sm:w-[33vw] rounded-md border-[0px] ${
           cardIndex % 2 == 0
             ? totalClicks == 0
               ? "bg-[#162c54] border-black z-20"
@@ -159,7 +159,7 @@ const Cards: React.FC<CardsProps> = ({ cardIndex, onForward, onPrevious }) => {
       <div
         onAnimationStart={() => setInAnimation(true)}
         onAnimationEnd={() => setInAnimation(false)}
-        className={`absolute flex flex-col justify-between h-full w-[33vw] rounded-md z-10 border-[0px] ${
+        className={`absolute flex flex-col justify-between h-full w-[80vw] sm:w-[33vw] rounded-md z-10 border-[0px] ${
           cardIndex % 2 == 0
             ? totalClicks == 0
               ? "bg-[#5E5E5E] border-[#5E5E5E] z-10 top-[30px] left-[30px]"

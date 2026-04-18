@@ -13,10 +13,10 @@ const montserrat600 = Montserrat({
 const Header: React.FC<HeaderProps> = ({ title }) => {
   return (
     <>
-      <div className="flex items-center mx-auto w-[calc(100%-50px)] max-w-[700px] pt-32 pb-10">
+      <div className="flex items-center mx-auto w-[calc(100%-30px)] sm:w-[calc(100%-50px)] max-w-[700px] pt-20 sm:pt-32 pb-8 sm:pb-10">
         <div className="flex-grow h-[1px] w-auto bg-[#3b426b] rounded-full "></div>
         <div
-          className={`hover:animate-move hover:text-[#6cf7cf] text-5xl mx-10 text-[#cdd3f7] ${montserrat600.className}`}
+          className={`hover:animate-move hover:text-[#6cf7cf] text-3xl sm:text-5xl mx-4 sm:mx-10 text-[#cdd3f7] whitespace-nowrap ${montserrat600.className}`}
         >
           {title}
         </div>
